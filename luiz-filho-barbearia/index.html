@@ -39,9 +39,9 @@ a{color:inherit}
 .top nav a:hover{color:var(--ink)}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1fr auto;gap:clamp(24px,5vw,80px);align-items:end;padding:clamp(24px,6vw,72px) var(--gutter) clamp(40px,6vw,80px)}
+.hero{display:grid;grid-template-columns:1fr auto;gap:clamp(24px,5vw,80px);align-items:center;padding:clamp(24px,6vw,72px) var(--gutter) clamp(40px,6vw,80px)}
 h1{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(36px,9vw,120px);line-height:.92;letter-spacing:-.005em}
-.fonte-ok h1{font-size:clamp(56px,14.5vw,176px);line-height:.86}
+.fonte-ok h1{font-size:clamp(56px,min(14.5vw,15vh),150px);line-height:.86}
 .fonte-ok .palavra{font-size:clamp(72px,19vw,300px)}
 h1 span{display:block}
 .lead{max-width:38ch;color:var(--ink-2);font-size:19px;margin:28px 0 32px}
@@ -55,7 +55,7 @@ h1 span{display:block}
 .prova b{color:var(--ink);font-size:18px}
 
 /* signature: the pole */
-.poste{width:clamp(76px,9vw,118px);height:clamp(360px,62vh,560px);display:block}
+.poste{width:clamp(76px,8vw,104px);height:clamp(340px,58vh,520px);display:block;margin-right:clamp(0px,4vw,80px)}
 .listras{transform:translateY(var(--rodar,0px))}
 .faixa-poste{height:18px;background:repeating-linear-gradient(-60deg,var(--red) 0 16px,var(--white) 16px 32px,var(--blue) 32px 48px,var(--white) 48px 64px);background-size:148px 18px;background-position:var(--rodar-x,0px) 0}
 
