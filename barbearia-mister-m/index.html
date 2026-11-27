@@ -114,6 +114,12 @@ h1 span{display:block}
 .galeria figure{margin:0;overflow:hidden;border-radius:16px}
 .galeria img{width:100%;height:100%;object-fit:cover;display:block}
 .legenda-foto{grid-column:1/-1;font-size:13px;color:var(--ink-2)}
+.numeros{padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(48px,7vw,96px)}
+.numeros ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,40px)}
+.numeros li{border-top:1px solid currentColor;padding-top:18px;display:flex;flex-direction:column;gap:6px}
+.numeros .num{font-family:var(--display);font-size:clamp(56px,8vw,128px);line-height:.9;letter-spacing:-.02em}
+.numeros .rot{font-size:15px;color:var(--ink-2)}
+@media (max-width:760px){.numeros ul{grid-template-columns:1fr}.numeros li{flex-direction:row;align-items:baseline;justify-content:space-between}}
 section{padding:clamp(64px,9vw,128px) var(--gutter)}
 h2{font-family:var(--display);font-weight:800;font-size:clamp(40px,5.4vw,80px);line-height:.95;letter-spacing:-.025em;margin-bottom:clamp(24px,4vw,44px)}
 .horario{background:var(--ground-2)}
@@ -200,6 +206,11 @@ footer{padding:40px var(--gutter);display:flex;flex-wrap:wrap;gap:16px;justify-c
       </div>
     </div>
   </div>
+
+
+  <section class="numeros" aria-label="Em números">
+    <ul data-reveal="items"><li><span class="num">5,0</span><span class="rot">estrelas no Google</span></li><li><span class="num">68</span><span class="rot">avaliações de clientes</span></li><li><span class="num">6</span><span class="rot">dias por semana abertos</span></li></ul>
+  </section>
 
   <section id="horario" class="horario" aria-labelledby="t-hor">
     <h2 data-reveal="lines" id="t-hor">Horário</h2>

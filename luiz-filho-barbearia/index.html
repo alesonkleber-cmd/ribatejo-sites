@@ -44,6 +44,8 @@
 <script type="importmap">
 {
   "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/+esm",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/",
     "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/+esm",
     "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.js/+esm",
     "gsap/SplitText": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.js/+esm",
@@ -122,6 +124,18 @@ h1 span{display:block}
 .g1{grid-row:1/3}.g2{align-self:end}.g3{grid-row:1/3;margin-top:clamp(40px,8vw,120px)!important}
 .legenda-foto{grid-column:1/-1;font-size:13px;color:var(--ink-2)}
 @media (max-width:760px){.galeria{grid-template-columns:1fr 1fr}.g1{grid-row:auto;grid-column:1/-1}.g3{grid-row:auto;margin-top:0!important}.hero-foto::after{background:linear-gradient(180deg,rgba(26,21,18,.75),rgba(26,21,18,.95))}}
+.numeros{padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(48px,7vw,96px)}
+.numeros ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,40px)}
+.numeros li{border-top:1px solid currentColor;padding-top:18px;display:flex;flex-direction:column;gap:6px}
+.numeros .num{font-family:var(--display);font-size:clamp(56px,8vw,128px);line-height:.9;letter-spacing:-.02em}
+.numeros .rot{font-size:15px;color:var(--ink-2)}
+@media (max-width:760px){.numeros ul{grid-template-columns:1fr}.numeros li{flex-direction:row;align-items:baseline;justify-content:space-between}}
+.poste-caixa{position:relative;width:clamp(150px,15vw,240px);height:clamp(380px,64vh,600px);margin-right:clamp(0px,3vw,60px);display:flex;align-items:center;justify-content:center}
+.poste-caixa .poste{margin:0;height:100%}
+.poste-caixa canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .6s}
+.poste-caixa.tem-3d canvas{opacity:1}
+.poste-caixa.tem-3d .poste{visibility:hidden}
+@media (max-width:760px){.poste-caixa{width:84px;height:300px;margin:0}}
 /* sections */
 section{padding:clamp(64px,9vw,128px) var(--gutter)}
 h2{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(44px,6.5vw,96px);line-height:.9;margin-bottom:clamp(28px,4vw,48px)}
@@ -192,7 +206,7 @@ footer{padding:48px var(--gutter) 0;overflow:hidden}
       </div>
       <p class="prova" data-intro-item><b>4,9 ★</b> em 45 avaliações no Google</p>
     </div>
-    <svg data-intro-media class="poste" viewBox="0 0 60 400" aria-hidden="true" focusable="false">
+    <div class="poste-caixa" data-intro-media><svg class="poste" viewBox="0 0 60 400" aria-hidden="true" focusable="false">
       <defs>
         <clipPath id="tubo"><rect x="10" y="26" width="40" height="348" rx="20"/></clipPath>
         <pattern id="lst" width="40" height="96" patternUnits="userSpaceOnUse" patternTransform="skewY(-32)">
@@ -202,7 +216,7 @@ footer{padding:48px var(--gutter) 0;overflow:hidden}
       </defs>
       <g clip-path="url(#tubo)"><rect class="listras" x="10" y="-200" width="40" height="800" fill="url(#lst)"/><rect x="10" y="26" width="40" height="348" fill="url(#brilho)"/></g>
       <rect x="4" y="4" width="52" height="26" rx="6" fill="#3A302A"/><rect x="4" y="370" width="52" height="26" rx="6" fill="#3A302A"/>
-    </svg>
+    </svg></div>
   </div>
 
   <div class="faixa-poste" aria-hidden="true"></div>
@@ -215,6 +229,11 @@ footer{padding:48px var(--gutter) 0;overflow:hidden}
     </div>
     <button class="pausa" type="button" data-marquee-toggle aria-pressed="false" hidden>Pausar</button>
   </div>
+
+
+  <section class="numeros" aria-label="Em números">
+    <ul data-reveal="items"><li><span class="num">4,9</span><span class="rot">estrelas no Google</span></li><li><span class="num">45</span><span class="rot">avaliações de clientes</span></li><li><span class="num">6</span><span class="rot">dias por semana abertos</span></li></ul>
+  </section>
 
   <section id="avaliacoes" aria-labelledby="t-aval">
     <h2 data-reveal="lines" id="t-aval">Quem vem, volta</h2>
@@ -315,6 +334,7 @@ footer{padding:48px var(--gutter) 0;overflow:hidden}
   import { initMagnetic } from '../assets/magnetic.js';
   init();
   initMagnetic();
+  import('../assets/poste3d.js').then(m=>m.montarPoste(document.querySelector('.poste-caixa'))).catch(()=>{});
 </script>
 </body>
 </html>
