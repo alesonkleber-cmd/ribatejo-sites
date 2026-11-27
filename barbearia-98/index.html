@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Barbearia 98 Men’s Space · Samora Correia</title>
+<meta name="description" content="Barbearia 98 Men’s Space, em Samora Correia desde 2020. 4,8 estrelas em 61 avaliações no Google. Marque online.">
+<meta property="og:title" content="Barbearia 98 Men’s Space · Samora Correia">
+<meta property="og:description" content="Um espaço dedicado à imagem masculina. Marque online.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23ECE6DC'/%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23171411' stroke-width='3'/%3E%3Cpath d='M16 16V9M16 16h5' stroke='%23171411' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#E4EBE8">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,800&display=swap" rel="stylesheet">
+<script>
+  (function (root) {
+    var saved = null, osReduce = false;
+    try { saved = localStorage.getItem('motion'); } catch (e) {}          /* storage can throw */
+    try { osReduce = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    var full = !osReduce && saved !== 'reduce';                           /* the OS "reduce" always wins */
+    root.setAttribute('data-motion', full ? 'full' : 'reduce');
+    if (full) root.classList.add('motion-ok');
+  })(document.documentElement);
+</script>
+
+<style>
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro] {
+    clip-path: inset(0 0 100% 0);                       /* clipped, not opacity: 0 */
+    animation: intro-deadline-clip 1ms var(--intro-deadline, 2s) forwards;
+  }
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro-item] {
+    translate: 0 var(--intro-shift, 1rem);              /* visible, just lower */
+    animation: intro-deadline-shift 1ms var(--intro-deadline, 2s) forwards;
+  }
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro-media] {
+    scale: var(--intro-scale, 1.06);                    /* visible, slightly over-scaled; clip it in its frame */
+    animation: intro-deadline-scale 1ms var(--intro-deadline, 2s) forwards;
+  }
+  @keyframes intro-deadline-clip  { to { clip-path: none; } }
+  @keyframes intro-deadline-shift { to { translate: none; } }
+  @keyframes intro-deadline-scale { to { scale: none; } }
+</style>
+
+<script type="importmap">
+{
+  "imports": {
+    "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/+esm",
+    "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.js/+esm",
+    "gsap/SplitText": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.js/+esm",
+    "gsap/CustomEase": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CustomEase.js/+esm",
+    "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.3.26/+esm"
+  }
+}
+</script>
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/CustomEase.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/+esm">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/motion-core.css">
+<style>
+:root{
+  --ground:#ECE6DC; --ground-2:#E1D9CB; --ink:#171411; --ink-2:#5E564C; --acc:#A84B26;
+  --display:"Cabinet Grotesk","Arial Narrow",system-ui,sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease-micro:cubic-bezier(.33,1,.68,1); --ease-move:cubic-bezier(.76,0,.24,1);
+  --dur-2:200ms; --dur-4:600ms; --dur-5:900ms;
+  --gutter:clamp(20px,4vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;font-weight:700;z-index:20;text-decoration:none}
+.skip:focus{top:12px}
+.aviso{background:#F2D46B;color:#241b00;font-size:13px;line-height:1.4;text-align:center;padding:8px 16px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px var(--gutter);border-bottom:1px solid #c5d1cc}
+.marca{font-family:var(--display);font-weight:800;font-size:22px;text-decoration:none;letter-spacing:-.01em}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--ink);text-decoration:none;padding:8px 0}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--ink-2)}
+[data-aberto="sim"] .chip i, .chip[data-aberto="sim"] i{background:#1E9E6A}
+
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,6vw,96px);align-items:center;padding:clamp(32px,6vw,88px) var(--gutter) clamp(56px,8vw,112px)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(50px,7.4vw,124px);line-height:.92;letter-spacing:-.03em}
+h1 span{display:block}
+.fonte-h1{font-size:14px;color:var(--ink-2);margin-top:14px}
+.lead{color:var(--ink-2);font-size:19px;max-width:38ch;margin:22px 0 30px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:12px;font-weight:700;font-size:17px;text-decoration:none;transition:background-color var(--dur-2) var(--ease-micro),color var(--dur-2) var(--ease-micro)}
+.btn{white-space:nowrap}
+.btn svg{width:20px;height:20px}
+.btn.cheio{background:var(--ink);color:var(--ground)}
+.btn.cheio:hover{background:var(--acc)}
+.btn.vazio{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.vazio:hover{background:var(--ink);color:var(--ground)}
+.prova{margin-top:26px;font-size:15px;color:var(--ink-2)}
+.prova b{color:var(--ink);font-size:18px}
+
+/* assinatura: o relógio */
+.relogio-box{display:flex;flex-direction:column;align-items:center;gap:16px}
+.relogio{width:min(340px,100%);height:auto;color:var(--ink)}
+.arco{fill:var(--acc);opacity:.28;transition:d var(--dur-5) var(--ease-move)}
+.ponteiro{transform-origin:150px 150px;transition:transform var(--dur-5) var(--ease-move)}
+.legenda{font-size:15px;color:var(--ink-2);text-align:center;min-height:3em}
+.legenda b{color:var(--ink)}
+
+.relogio-box{position:relative;display:block!important}
+.foto-hero{margin:0 0 0 auto;width:min(100%,500px);aspect-ratio:9/11;max-height:76vh;overflow:hidden;border-radius:16px}
+.foto-hero img{width:100%;height:100%;object-fit:cover;display:block}
+.mostrador{position:absolute;left:-18%;bottom:-6%;background:var(--ground);border-radius:24px;padding:20px;display:flex;flex-direction:column;align-items:center;gap:12px;box-shadow:0 24px 60px rgba(14,43,41,.2);width:min(392px,92%)}
+.mostrador .relogio{width:200px}
+.galeria{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(12px,2vw,24px);align-items:end}
+.galeria figure{margin:0;overflow:hidden;border-radius:16px}
+.galeria img{width:100%;height:100%;object-fit:cover;display:block}
+.legenda-foto{grid-column:1/-1;font-size:13px;color:var(--ink-2)}
+.numeros{padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(48px,7vw,96px)}
+.numeros ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,40px)}
+.numeros li{border-top:1px solid currentColor;padding-top:18px;display:flex;flex-direction:column;gap:6px}
+.numeros .num{font-family:var(--display);font-size:clamp(56px,8vw,128px);line-height:.9;letter-spacing:-.02em}
+.numeros .rot{font-size:15px;color:var(--ink-2)}
+@media (max-width:760px){.numeros ul{grid-template-columns:1fr}.numeros li{flex-direction:row;align-items:baseline;justify-content:space-between}}
+.sub{font-family:var(--display);font-weight:800;font-size:22px;margin-bottom:8px}
+.precos{list-style:none;margin-bottom:20px}
+.precos li{display:grid;grid-template-columns:1fr auto auto;gap:16px;align-items:baseline;padding:11px 0;border-bottom:1px solid #b9c7c1}
+.precos .sd{font-size:14px;color:var(--ink-2)}
+.precos .sp{font-weight:700;font-variant-numeric:tabular-nums;min-width:5.5em;text-align:right}
+.extra{font-size:15px;color:var(--ink-2);margin-bottom:20px}
+section{padding:clamp(64px,9vw,128px) var(--gutter)}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(40px,5.4vw,80px);line-height:.95;letter-spacing:-.025em;margin-bottom:clamp(24px,4vw,44px)}
+.horario{background:var(--ground-2)}
+.horario .grade{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.dias-mini{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.dm{appearance:none;border:0;font:inherit;font-size:14px;font-weight:700;min-width:44px;min-height:44px;border-radius:10px;background:transparent;color:var(--ink-2);box-shadow:inset 0 0 0 1.5px #b9c7c1;cursor:pointer;transition:background-color var(--dur-2) var(--ease-micro),color var(--dur-2) var(--ease-micro)}
+.dm:hover{color:var(--ink)}
+.dm[aria-pressed="true"]{background:var(--ink);color:var(--ground);box-shadow:none}
+.tabela{width:100%;border-collapse:collapse}
+.tabela td{padding:14px 4px;border-bottom:1px solid #b9c7c1}
+.tabela td+td{text-align:right;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.tabela tr[aria-current] td{font-weight:700;color:var(--ink)}
+/*x*/.dia{appearance:none;background:none;border:0;border-bottom:1px solid #b9c7c1;font:inherit;color:inherit;display:flex;justify-content:space-between;gap:16px;padding:16px 4px;cursor:pointer;text-align:left;min-height:56px;align-items:center;transition:background-color var(--dur-2) var(--ease-micro)}
+.dia:hover{background:rgba(14,43,41,.05)}
+.dia span:last-child{color:var(--ink-2);font-variant-numeric:tabular-nums;text-align:right}
+.dia[aria-pressed="true"]{font-weight:700}
+.dia[aria-pressed="true"] span:last-child{color:var(--ink)}
+.dica{font-size:14px;color:var(--ink-2);margin-top:14px}
+.aval .linha{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(28px,5vw,72px)}
+.aval blockquote p{font-size:19px}
+.aval .grande p{font-family:var(--display);font-weight:500;font-size:clamp(26px,3vw,40px);line-height:1.2;letter-spacing:-.01em}
+.aval cite{display:block;font-style:normal;font-size:14px;color:var(--ink-2);margin-top:12px}
+.aval .peq + .peq{margin-top:28px}
+.vaga{border:1.5px dashed var(--ink-2);border-radius:12px;padding:24px;color:var(--ink-2);max-width:44ch}
+.vaga strong{color:var(--ink);display:block;margin-bottom:6px}
+.onde{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,5vw,72px);align-items:start}
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:16px;background:var(--ground-2);display:block}
+footer{padding:40px var(--gutter);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;font-size:14px;color:var(--ink-2);border-top:1px solid #c5d1cc}
+.assinatura{font-family:var(--display);font-weight:800;font-size:clamp(90px,24vw,400px);line-height:.74;letter-spacing:-.045em;white-space:nowrap;padding:0 var(--gutter);margin-bottom:-.06em;overflow:hidden;color:var(--ink)}
+.flutua{position:fixed;right:16px;bottom:16px;z-index:10;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 22px;background:var(--acc);color:#fff;font-weight:700;text-decoration:none;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.flutua svg{width:22px;height:22px}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .relogio-box{order:-1}
+  .foto-hero{width:100%;aspect-ratio:4/3;max-height:none}
+  .mostrador{position:relative;left:auto;bottom:auto;width:auto;margin:-40px 12px 0;display:grid;grid-template-columns:110px 1fr;align-items:center;gap:8px 14px}
+  .mostrador .relogio{width:110px}
+  .dias-mini{grid-column:1/-1;grid-row:2;justify-content:flex-start}
+  .legenda{grid-column:2;grid-row:1;text-align:left}
+  .galeria{grid-template-columns:1fr}
+  .legenda{text-align:left;min-height:0}
+  .horario .grade,.aval .linha,.onde{grid-template-columns:1fr}
+  footer{padding-bottom:24px}
+  .assinatura{padding-bottom:84px;margin-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar para o conteúdo</a>
+<div class="aviso" role="note">Prévia feita pela Ribatejo Sites para a Barbearia 98 Men’s Space. Ainda não é o site oficial.</div>
+
+<header class="top">
+  <a class="marca" href="#main">Barbearia 98</a>
+  <a class="chip" href="#horario" data-chip><i></i><span>Ver horário</span></a>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="hero">
+    <div>
+      <h1 data-intro><span>Um espaço</span><span>dedicado à imagem</span><span>masculina.</span></h1>
+      <p class="fonte-h1">Fundada a 4 de maio de 2020, em Samora Correia.</p>
+      <p class="lead" data-intro-item>“A prioridade é a satisfação do cliente, seja pela qualidade do serviço como pela energia incomparável do nosso espaço.” Na Rua General Vasco Gonçalves, com o Ruben e o David.</p>
+      <div class="acoes" data-intro-item>
+        <a data-magnetic class="btn cheio" href="https://noona.pt/barbearia98mensspace" target="_blank" rel="noopener">Agendar online</a>
+        <a data-magnetic class="btn vazio" href="https://wa.me/351932415382?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio%20na%20Barbearia%2098.">WhatsApp 932 415 382</a>
+      </div>
+      <p class="prova" data-intro-item><b>4,8 ★</b> em 61 avaliações no Google</p>
+    </div>
+    <div class="relogio-box">
+      <figure class="foto-hero" data-intro-media><img class="" src="https://images.unsplash.com/photo-1759134198561-e2041049419c?auto=format&fit=crop&w=900&h=1100&q=70" srcset="https://images.unsplash.com/photo-1759134198561-e2041049419c?auto=format&fit=crop&w=900&h=1100&q=70 1x, https://images.unsplash.com/photo-1759134198561-e2041049419c?auto=format&fit=crop&w=1800&h=2200&q=70 2x" width="900" height="1100" alt="Barbeiros a trabalhar num salão moderno" fetchpriority="high" ></figure>
+      <div class="mostrador"><svg class="relogio" viewBox="0 0 300 300" role="img" aria-label="Relógio com a hora atual em Samora Correia e o horário da barbearia">
+        <circle cx="150" cy="150" r="140" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path class="arco" d="M150 150Z"/>
+        <g id="marcas"></g>
+        <line class="ponteiro" data-h x1="150" y1="150" x2="150" y2="78" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+        <line class="ponteiro" data-m x1="150" y1="150" x2="150" y2="44" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="150" cy="150" r="9" fill="currentColor"/>
+      </svg>
+      <div class="dias-mini" role="group" aria-label="Ver o horário de outro dia no relógio"></div>
+      <p class="legenda" aria-live="polite"></p>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="numeros" aria-label="Em números">
+    <ul data-reveal="items"><li><span class="num">4,8</span><span class="rot">estrelas no Google</span></li><li><span class="num">61</span><span class="rot">avaliações de clientes</span></li><li><span class="num">2020</span><span class="rot">o ano em que abriu</span></li></ul>
+  </section>
+
+  <section id="horario" class="horario" aria-labelledby="t-hor">
+    <h2 data-reveal="lines" id="t-hor">Horário e equipa</h2>
+    <div class="grade">
+      <table class="tabela"><tbody></tbody></table>
+      <div>
+        <h3 class="sub">A equipa</h3>
+        <ul class="precos" data-reveal="items"><li><span class="sn">Ruben Nunes</span><span class="sd">barbeiro</span><span class="sp"></span></li><li><span class="sn">David Carvalho</span><span class="sd">barbeiro</span><span class="sp"></span></li></ul>
+        <p class="extra">Serviços, preços e horários livres de cada barbeiro estão na marcação online.</p>
+        <a data-magnetic class="btn cheio" href="https://noona.pt/barbearia98mensspace" target="_blank" rel="noopener">Ver serviços e marcar</a>
+        
+      </div>
+    </div>
+  </section>
+
+
+  <section class="galeria" aria-label="Imagens">
+    <figure class="g1" data-reveal="image"><img class="" src="https://images.unsplash.com/photo-1647140655214-e4a2d914971f?auto=format&fit=crop&w=1200&h=800&q=70" srcset="https://images.unsplash.com/photo-1647140655214-e4a2d914971f?auto=format&fit=crop&w=1200&h=800&q=70 1x, https://images.unsplash.com/photo-1647140655214-e4a2d914971f?auto=format&fit=crop&w=2400&h=1600&q=70 2x" width="1200" height="800" alt="Barbeiro a cortar o cabelo com tesoura" loading="lazy" ></figure>
+    <figure class="g2" data-reveal="image"><img class="" src="https://images.unsplash.com/photo-1657105052497-f996284ffff8?auto=format&fit=crop&w=700&h=900&q=70" srcset="https://images.unsplash.com/photo-1657105052497-f996284ffff8?auto=format&fit=crop&w=700&h=900&q=70 1x, https://images.unsplash.com/photo-1657105052497-f996284ffff8?auto=format&fit=crop&w=1400&h=1800&q=70 2x" width="700" height="900" alt="Barbeiro a aparar o cabelo com tesoura e pente" loading="lazy" ></figure>
+    <p class="legenda-foto">Imagens ilustrativas. No site final entram as fotos da barbearia.</p>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <h2 data-reveal="lines" id="t-aval">O que dizem os clientes</h2>
+    <div class="linha">
+      <blockquote data-reveal="settle" class="grande"><p>“David e Ruben 5 estrelas! Espaço, também. O corte ficou excelente… da forma que pedi e melhor.”</p><cite>Avaliação no Google</cite></blockquote>
+      <div>
+        <blockquote data-reveal="settle" class="peq"><p>“Adoro o espaço, barbeiros melhores ainda, preços 10/10.”</p><cite>Avaliação no Google</cite></blockquote>
+        <blockquote data-reveal="settle" class="peq"><p>“Profissionalismo e simpatia! E muuuuita paciência com o meu filhote.”</p><cite>Avaliação no Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="onde" aria-labelledby="t-onde" style="padding-top:0">
+    <h2 data-reveal="lines" id="t-onde">Onde estamos</h2>
+    <div class="onde">
+      <div>
+        <p style="margin-bottom:24px"><strong>R. Gen. Vasco Gonçalves, Bloco A, Loja 2<br>2135-130 Samora Correia</strong></p>
+        <a data-magnetic class="btn cheio" href="https://www.google.com/maps/search/?api=1&query=Barbearia%2098%20Men%27s%20Space%2C%20Samora%20Correia" target="_blank" rel="noopener">Abrir no Google Maps</a>
+      </div>
+      <iframe class="mapa" title="Mapa: Barbearia 98 Men’s Space, R. Gen. Vasco Gonçalves, Samora Correia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Barbearia%2098%20Men%27s%20Space%2C%20R.%20Gen.%20Vasco%20Gon%C3%A7alves%2C%202135-130%20Samora%20Correia&z=16&output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Barbearia 98 Men’s Space · R. Gen. Vasco Gonçalves, Samora Correia · <a href="tel:+351932415382">932 415 382</a></span>
+  <a class="chip" href="#horario" data-chip><i></i><span>Ver horário</span></a>
+  <span>Site por Ribatejo Sites</span>
+</footer>
+<p class="assinatura" aria-hidden="true">Barbearia 98</p>
+
+<a class="flutua" href="https://noona.pt/barbearia98mensspace" target="_blank" rel="noopener" aria-label="Agendar online">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>Agendar</a>
+
+<script>
+(function(){
+  // Horário real (Google Maps). Cada dia: lista de intervalos [abre, fecha] em horas.
+  var NOMES=['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+  var H={0:[],1:[[9.5,13],[15,20]],2:[[9.5,13],[15,20]],3:[[9.5,13],[15,20]],4:[[9.5,13],[15,20]],5:[[9.5,13],[15,20]],6:[[8.5,13.5]]};
+  function fmt(h){var hh=Math.floor(h),mm=Math.round((h-hh)*60);return hh+'h'+(mm<10?'0':'')+mm}
+  function txtDia(d){return H[d].length?H[d].map(function(i){return fmt(i[0])+' – '+fmt(i[1])}).join(' · '):'Fechado'}
+
+  var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Lisbon',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  var o={};p.forEach(function(x){o[x.type]=x.value});
+  var hoje={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday], agora=(+o.hour%24)+(+o.minute)/60;
+
+  // Marcas do mostrador
+  var g=document.getElementById('marcas'), ns='http://www.w3.org/2000/svg';
+  for(var i=0;i<12;i++){var l=document.createElementNS(ns,'line');l.setAttribute('x1',150);l.setAttribute('y1',16);l.setAttribute('x2',150);l.setAttribute('y2',i%3?28:38);l.setAttribute('stroke','currentColor');l.setAttribute('stroke-width',i%3?3:6);l.setAttribute('transform','rotate('+i*30+' 150 150)');g.appendChild(l)}
+
+  // Arco do horário (mostrador de 12h; usamos o intervalo principal do dia)
+  function ponto(h){var a=(h%12)/12*2*Math.PI;return [150+128*Math.sin(a),150-128*Math.cos(a)]}
+  function arco(ints){
+    if(!ints.length) return 'M150 150Z';
+    return ints.map(function(iv){var a=ponto(iv[0]),b=ponto(iv[1]),grande=(iv[1]-iv[0])>6?1:0;
+      return 'M150 150L'+a[0].toFixed(1)+' '+a[1].toFixed(1)+'A128 128 0 '+grande+' 1 '+b[0].toFixed(1)+' '+b[1].toFixed(1)+'Z'}).join('');
+  }
+  var arcoEl=document.querySelector('.arco'), ph=document.querySelector('[data-h]'), pm=document.querySelector('[data-m]'), leg=document.querySelector('.legenda');
+  var rotH=0, rotM=0;
+  function apontar(h){ // gira sempre para a frente até à hora pedida
+    var alvoH=(h%12)*30, alvoM=(h%1)*360;
+    rotH+=((alvoH-rotH)%360+360)%360; rotM+=((alvoM-rotM)%360+360)%360;
+    ph.style.transform='rotate('+rotH+'deg)'; pm.style.transform='rotate('+rotM+'deg)';
+  }
+  function estadoAgora(){
+    var ints=H[hoje];
+    for(var k=0;k<ints.length;k++){ if(agora>=ints[k][0]&&agora<ints[k][1]) return {aberto:true,txt:'Aberto agora · fecha às '+fmt(ints[k][1])}; }
+    for(k=0;k<ints.length;k++){ if(agora<ints[k][0]) return {aberto:false,txt:'Fechado agora · abre às '+fmt(ints[k][0])}; }
+    for(var d=1;d<=7;d++){var dd=(hoje+d)%7; if(H[dd].length) return {aberto:false,txt:'Fechado agora · abre '+(d===1?'amanhã':NOMES[dd].toLowerCase())+' às '+fmt(H[dd][0][0])};}
+  }
+  var est=estadoAgora();
+  document.querySelectorAll('[data-chip]').forEach(function(c){c.dataset.aberto=est.aberto?'sim':'nao';c.querySelector('span').textContent=est.txt});
+
+  function mostrar(d){
+    arcoEl.setAttribute('d',arco(H[d]));
+    if(d===hoje){ apontar(agora); leg.innerHTML='<b>Agora em Samora Correia.</b> '+est.txt+'.'; }
+    else { apontar(H[d].length?H[d][0][0]:0); leg.innerHTML='<b>'+NOMES[d]+':</b> '+txtDia(d)+'.'; }
+    botoes.forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.d===d?'true':'false')});
+  }
+  var mini=document.querySelector('.dias-mini'), corpo=document.querySelector('.tabela tbody'), botoes=[];
+  var CURTO=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+  [1,2,3,4,5,6,0].forEach(function(d){
+    var b=document.createElement('button');b.type='button';b.className='dm';b.dataset.d=d;b.textContent=CURTO[d];
+    b.setAttribute('aria-label',NOMES[d]+(d===hoje?', hoje':''));
+    b.addEventListener('click',function(){mostrar(d)});
+    mini.appendChild(b); botoes.push(b);
+    var tr=document.createElement('tr'); if(d===hoje) tr.setAttribute('aria-current','date');
+    tr.innerHTML='<td>'+NOMES[d]+(d===hoje?' (hoje)':'')+'</td><td>'+txtDia(d).replace(' · ','<br>')+'</td>'; corpo.appendChild(tr);
+  });
+  mostrar(hoje);
+})();
+</script>
+<script type="module">
+  import { init } from '../assets/motion-core.js';
+  import { initMagnetic } from '../assets/magnetic.js';
+  init();
+  initMagnetic();
+</script>
+</body>
+</html>

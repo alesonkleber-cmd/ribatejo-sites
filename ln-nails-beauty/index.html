@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Ln Nails & Beauty · Samora Correia</title>
+<meta name="description" content="Estúdio de unhas e beleza no Largo Fernandes Pratas, Samora Correia. 5,0 estrelas no Google. Marque pelo WhatsApp.">
+<meta property="og:title" content="Ln Nails & Beauty · Samora Correia">
+<meta property="og:description" content="Há clientes que vêm de Lisboa só para fazer as unhas aqui. Marque pelo WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23ECEEEA'/%3E%3Cpath d='M16 5c-5 0-8 5-8 12v10h16V17c0-7-3-12-8-12z' fill='%238E1F3F'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#EDE9EA">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&display=swap" rel="stylesheet">
+<script>
+  (function (root) {
+    var saved = null, osReduce = false;
+    try { saved = localStorage.getItem('motion'); } catch (e) {}          /* storage can throw */
+    try { osReduce = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    var full = !osReduce && saved !== 'reduce';                           /* the OS "reduce" always wins */
+    root.setAttribute('data-motion', full ? 'full' : 'reduce');
+    if (full) root.classList.add('motion-ok');
+  })(document.documentElement);
+</script>
+
+<style>
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro] {
+    clip-path: inset(0 0 100% 0);                       /* clipped, not opacity: 0 */
+    animation: intro-deadline-clip 1ms var(--intro-deadline, 2s) forwards;
+  }
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro-item] {
+    translate: 0 var(--intro-shift, 1rem);              /* visible, just lower */
+    animation: intro-deadline-shift 1ms var(--intro-deadline, 2s) forwards;
+  }
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro-media] {
+    scale: var(--intro-scale, 1.06);                    /* visible, slightly over-scaled; clip it in its frame */
+    animation: intro-deadline-scale 1ms var(--intro-deadline, 2s) forwards;
+  }
+  @keyframes intro-deadline-clip  { to { clip-path: none; } }
+  @keyframes intro-deadline-shift { to { translate: none; } }
+  @keyframes intro-deadline-scale { to { scale: none; } }
+</style>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/+esm",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/",
+    "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/+esm",
+    "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.js/+esm",
+    "gsap/SplitText": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.js/+esm",
+    "gsap/CustomEase": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CustomEase.js/+esm",
+    "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.3.26/+esm"
+  }
+}
+</script>
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/CustomEase.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/+esm">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/motion-core.css">
+<style>
+:root{
+  --ground:#ECEEEA; --ground-2:#DFE3DD; --ink:#1E2724; --ink-2:#56625D;
+  --acc:#8E1F3F; --acc-ink:#FFFFFF;
+  --display:"Gambarino",Georgia,"Times New Roman",serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease-enter:cubic-bezier(.25,1,.5,1); --ease-micro:cubic-bezier(.33,1,.68,1);
+  --dur-2:200ms; --dur-3:400ms;
+  --gutter:clamp(20px,4vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;font-weight:700;z-index:20;text-decoration:none}
+.skip:focus{top:12px}
+.aviso{background:#F2D46B;color:#241b00;font-size:13px;line-height:1.4;text-align:center;padding:8px 16px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px var(--gutter)}
+.marca{font-family:var(--display);font-size:24px;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.marca svg{width:14px;height:20px}
+.top nav{display:flex;gap:24px;font-size:15px;font-weight:600}
+.top nav a{text-decoration:none;color:var(--ink-2);padding:10px 0;transition:color var(--dur-2) var(--ease-micro)}
+.top nav a:hover{color:var(--ink)}
+
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,6vw,96px);align-items:center;padding:clamp(28px,6vw,80px) var(--gutter) clamp(56px,8vw,112px)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,5.6vw,84px);line-height:1.02;letter-spacing:-.015em;max-width:13ch}
+.lead{color:var(--ink-2);font-size:19px;max-width:36ch;margin:24px 0 32px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;transition:background-color var(--dur-3) var(--ease-enter),color var(--dur-3) var(--ease-enter),box-shadow var(--dur-2)}
+.btn{white-space:nowrap}
+.btn svg{width:20px;height:20px}
+.btn.cheio{background:var(--acc);color:var(--acc-ink)}
+.btn.cheio:hover{box-shadow:inset 0 0 0 100px rgba(0,0,0,.12)}
+.btn.vazio{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.vazio:hover{background:var(--ink);color:var(--ground)}
+.prova{margin-top:26px;font-size:15px;color:var(--ink-2)}
+.prova b{color:var(--ink);font-size:18px}
+
+/* assinatura: a unha e os frascos */
+.palco{display:flex;flex-direction:column;align-items:center;gap:28px}
+.unha{width:clamp(170px,22vw,260px);height:auto}
+.unha .cor{fill:var(--acc);transition:fill var(--dur-3) var(--ease-enter)}
+.frascos{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.frascos legend{width:100%;text-align:center;font-size:14px;color:var(--ink-2);margin-bottom:10px}
+fieldset{border:0}
+.frasco{appearance:none;border:0;background:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;width:48px;padding:4px 0;border-radius:8px}
+.frasco i{width:16px;height:22px;background:var(--ink);border-radius:4px 4px 1px 1px}
+.frasco b{width:40px;height:42px;border-radius:11px;background:var(--c);box-shadow:inset -6px -7px 0 rgba(0,0,0,.12),inset 6px 6px 0 rgba(255,255,255,.28)}
+.frasco[aria-pressed="true"] b{outline:2px solid var(--ink);outline-offset:3px}
+.nome-cor{font-size:14px;color:var(--ink-2);min-height:1.4em}
+
+.palco{position:relative;display:block!important}
+.foto-hero{margin:0;border-radius:200px 200px 24px 24px;overflow:hidden;aspect-ratio:9/11;max-height:78vh;margin-left:auto;width:min(100%,520px)}
+.foto-hero img{width:100%;height:100%;object-fit:cover;display:block}
+.cartao{position:absolute;left:-12%;bottom:6%;background:var(--ground);border-radius:24px;padding:20px 22px;display:flex;flex-direction:column;align-items:center;gap:14px;box-shadow:0 20px 60px rgba(43,24,34,.18)}
+.cartao .unha{width:110px}
+.galeria{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(12px,2vw,24px);align-items:end;padding-bottom:0}
+.galeria figure{margin:0;overflow:hidden;border-radius:20px}
+.galeria img{width:100%;height:100%;object-fit:cover;display:block}
+.legenda-foto{grid-column:1/-1;font-size:13px;color:var(--ink-2)}
+.numeros{padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(48px,7vw,96px)}
+.numeros ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,40px)}
+.numeros li{border-top:1px solid currentColor;padding-top:18px;display:flex;flex-direction:column;gap:6px}
+.numeros .num{font-family:var(--display);font-size:clamp(56px,8vw,128px);line-height:.9;letter-spacing:-.02em}
+.numeros .rot{font-size:15px;color:var(--ink-2)}
+@media (max-width:760px){.numeros ul{grid-template-columns:1fr}.numeros li{flex-direction:row;align-items:baseline;justify-content:space-between}}
+.frasco-caixa{position:relative;width:170px;height:220px;display:flex;align-items:center;justify-content:center}
+.frasco-caixa canvas{position:absolute;inset:-10px;width:calc(100% + 20px);height:calc(100% + 20px);opacity:0;transition:opacity .6s;cursor:grab}
+.frasco-caixa.tem-3d canvas{opacity:1}
+.frasco-caixa.tem-3d .unha{visibility:hidden}
+.dica3d{display:none;position:absolute;bottom:-4px;font-size:12px;color:var(--ink-2)}
+.frasco-caixa.tem-3d .dica3d{display:block}
+.cartao .unha{width:110px}
+section{padding:clamp(64px,9vw,128px) var(--gutter)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(36px,4.4vw,60px);line-height:1.05;margin-bottom:clamp(24px,4vw,44px)}
+.aval{background:var(--ground-2)}
+.aval blockquote{max-width:30ch}
+.aval .grande p{font-family:var(--display);font-size:clamp(28px,3.4vw,46px);line-height:1.2}
+.aval .grande p::before{content:"“";color:var(--acc);transition:color var(--dur-3)}
+.aval .grande p::after{content:"”";color:var(--acc);transition:color var(--dur-3)}
+.aval cite{display:block;font-style:normal;font-size:14px;color:var(--ink-2);margin-top:12px}
+.aval .linha{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(28px,5vw,72px);align-items:end}
+.aval .peq p{font-size:19px}
+.serv{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px)}
+.serv .texto p{color:var(--ink-2);max-width:40ch}
+.vaga{border:1.5px dashed var(--ink-2);border-radius:16px;padding:24px;color:var(--ink-2);max-width:44ch;align-self:start}
+.vaga strong{color:var(--ink);display:block;margin-bottom:6px}
+.onde{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,5vw,72px);align-items:start}
+.estado{display:inline-flex;align-items:center;gap:10px;font-weight:700;margin-bottom:20px}
+.estado i{width:10px;height:10px;border-radius:50%;background:var(--ink-2)}
+.estado[data-aberto="sim"] i{background:#2E8B57}
+table{width:100%;border-collapse:collapse;margin:8px 0 28px}
+td{padding:12px 0;border-bottom:1px solid #d3cacd}
+td+td{text-align:right;color:var(--ink-2)}
+tr[aria-current] td{color:var(--ink);font-weight:700}
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:20px;background:var(--ground-2);display:block}
+footer{padding:48px var(--gutter);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:14px;color:var(--ink-2);border-top:1px solid #d3cacd}
+.mini{display:flex;gap:6px}
+.mini span{width:14px;height:20px;border-radius:5px;background:var(--c)}
+.assinatura{font-family:var(--display);font-size:clamp(48px,11.2vw,190px);line-height:.8;letter-spacing:-.03em;white-space:nowrap;padding:0 var(--gutter);margin-bottom:-.08em;overflow:hidden;color:var(--ink)}
+.assinatura em{font-style:normal;color:var(--acc);transition:color var(--dur-3)}
+.flutua{position:fixed;right:16px;bottom:16px;z-index:10;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 20px;background:#1F7A4A;color:#fff;font-weight:700;text-decoration:none;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.flutua svg{width:22px;height:22px}
+@media (max-width:760px){
+  .top nav a:not(.tel){display:none}
+  .hero{grid-template-columns:1fr}
+  .palco{order:-1}
+  .foto-hero{width:100%;max-height:none;aspect-ratio:4/3;border-radius:120px 120px 20px 20px}
+  .cartao{position:relative;left:auto;bottom:auto;margin:-48px 12px 0;flex-direction:row;flex-wrap:wrap;justify-content:flex-start}
+  .galeria{grid-template-columns:1fr}
+  .cartao{gap:10px;padding:16px}
+  .cartao .unha{width:58px}
+  .frasco-caixa{width:84px;height:120px}
+  .dica3d{display:none!important}
+  .cartao{flex-wrap:nowrap!important;align-items:center}
+  .cartao .frascos{width:auto;flex:1;min-width:0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px 4px;justify-items:center}
+  .cartao .frascos legend{grid-column:1/-1}
+  .cartao .frasco{width:31px}.cartao .frasco b{width:28px;height:30px}.cartao .frasco i{width:11px;height:15px}
+  .unha{width:84px}
+  .frascos{width:100%}
+  .frascos{justify-content:flex-start}
+  .frascos legend{text-align:left}
+  .frasco{width:44px}.frasco b{width:34px;height:36px}.frasco i{width:13px;height:18px}
+  .nome-cor{display:none}
+  .aval .linha,.serv,.onde{grid-template-columns:1fr}
+  footer{padding-bottom:24px}
+  .assinatura{padding-bottom:84px;margin-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar para o conteúdo</a>
+<div class="aviso" role="note">Prévia feita pela Ribatejo Sites para a Ln Nails & Beauty. Ainda não é o site oficial.</div>
+
+<header class="top">
+  <a class="marca" href="#main"><svg viewBox="0 0 14 20" aria-hidden="true"><path d="M7 0C3 0 0 4 0 10v10h14V10C14 4 11 0 7 0Z" fill="var(--acc)"/></svg>Ln Nails &amp; Beauty</a>
+  <nav aria-label="Principal">
+    <a href="#avaliacoes">Avaliações</a>
+    <a href="#onde">Onde estamos</a>
+    <a class="tel" href="tel:+351964311633">964 311 633</a>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="hero">
+    <div>
+      <h1 data-intro>Há clientes que vêm de Lisboa só para fazer as unhas aqui.</h1>
+      <p class="lead" data-intro-item>Estúdio de unhas e beleza no Largo Fernandes Pratas, em Samora Correia. É o que contam as avaliações da Leidy no Google.</p>
+      <div class="acoes" data-intro-item>
+        <a data-magnetic class="btn cheio" href="https://wa.me/351964311633?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>
+          Marcar pelo WhatsApp</a>
+        <a data-magnetic class="btn vazio" href="tel:+351964311633">Ligar</a>
+      </div>
+      <p class="prova" data-intro-item><b>5,0 ★</b> em 13 avaliações no Google</p>
+    </div>
+
+    <div class="palco">
+      <figure class="foto-hero" data-intro-media><img class="" src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=900&h=1100&q=70" srcset="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=900&h=1100&q=70 1x, https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=1800&h=2200&q=70 2x" width="900" height="1100" alt="Mão com manicure em tom rosa" fetchpriority="high" ></figure>
+      <div class="cartao">
+      <div class="frasco-caixa"><svg class="unha" viewBox="0 0 200 300" role="img" aria-label="Unha pintada com a cor escolhida">
+        <path d="M100 8C46 8 18 70 18 150v150h164V150C182 70 154 8 100 8Z" fill="#E7D3CB"/>
+        <path class="cor" d="M100 22C56 22 34 78 34 150v150h132V150C166 78 144 22 100 22Z"/>
+        <path d="M70 60c-14 18-20 46-20 80" stroke="#fff" stroke-opacity=".45" stroke-width="10" stroke-linecap="round" fill="none"/>
+      </svg><span class="dica3d">Arraste para rodar</span></div>
+      <fieldset class="frascos">
+        <legend>Toque num verniz para pintar</legend>
+        <button class="frasco" type="button" style="--c:#8E1F3F" data-cor="#8E1F3F" data-texto="#FFFFFF" data-nome="Bordô" aria-pressed="true" aria-label="Bordô"><i></i><b></b></button>
+        <button class="frasco" type="button" style="--c:#B8325A" data-cor="#B8325A" data-texto="#FFFFFF" data-nome="Framboesa" aria-pressed="false" aria-label="Framboesa"><i></i><b></b></button>
+        <button class="frasco" type="button" style="--c:#E6A3B3" data-cor="#E6A3B3" data-texto="#2B1822" data-nome="Rosa claro" aria-pressed="false" aria-label="Rosa claro"><i></i><b></b></button>
+        <button class="frasco" type="button" style="--c:#E9CFC4" data-cor="#E9CFC4" data-texto="#2B1822" data-nome="Nude" aria-pressed="false" aria-label="Nude"><i></i><b></b></button>
+        <button class="frasco" type="button" style="--c:#4E2A7A" data-cor="#4E2A7A" data-texto="#FFFFFF" data-nome="Violeta" aria-pressed="false" aria-label="Violeta"><i></i><b></b></button>
+        <button class="frasco" type="button" style="--c:#1F1A1D" data-cor="#1F1A1D" data-texto="#FFFFFF" data-nome="Preto" aria-pressed="false" aria-label="Preto"><i></i><b></b></button>
+      </fieldset>
+      <p class="nome-cor" aria-live="polite">Bordô</p>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="numeros" aria-label="Em números">
+    <ul data-reveal="items"><li><span class="num">5,0</span><span class="rot">estrelas no Google</span></li><li><span class="num">13</span><span class="rot">avaliações de clientes</span></li><li><span class="num">5</span><span class="rot">dias por semana abertos</span></li></ul>
+  </section>
+
+  <section id="avaliacoes" class="aval" aria-labelledby="t-aval">
+    <h2 data-reveal="lines" id="t-aval">O que dizem as clientes</h2>
+    <div class="linha">
+      <blockquote data-reveal="settle" class="grande"><p>A Leidy é super profissional e simpática e por tudo isto vou de Lisboa para Samora Correia só para fazer as unhas com ela.</p><cite>Avaliação no Google</cite></blockquote>
+      <blockquote data-reveal="settle" class="peq"><p>“Trabalho perfeito, fico apaixonada pela remoção de cutículas que a profissional Leide faz.”</p><cite>Avaliação no Google</cite></blockquote>
+    </div>
+  </section>
+
+
+  <section class="galeria" aria-label="Imagens">
+    <figure class="g1" data-reveal="image"><img class="" src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=900&h=1100&q=70" srcset="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=900&h=1100&q=70 1x, https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=1800&h=2200&q=70 2x" width="900" height="1100" alt="Mão com unhas cuidadas sobre fundo rosa" loading="lazy" ></figure>
+    <figure class="g2" data-reveal="image"><img class="" src="https://images.unsplash.com/photo-1643648854897-7b5845b4c04c?auto=format&fit=crop&w=1100&h=800&q=70" srcset="https://images.unsplash.com/photo-1643648854897-7b5845b4c04c?auto=format&fit=crop&w=1100&h=800&q=70 1x, https://images.unsplash.com/photo-1643648854897-7b5845b4c04c?auto=format&fit=crop&w=2200&h=1600&q=70 2x" width="1100" height="800" alt="Mão de mulher com manicure rosa" loading="lazy" ></figure>
+    <p class="legenda-foto">Imagens ilustrativas. No site final entram fotos dos trabalhos do estúdio.</p>
+  </section>
+
+  <section aria-labelledby="t-serv">
+    <h2 data-reveal="lines" id="t-serv">Serviços</h2>
+    <div class="serv">
+      <div class="texto"><p>As clientes destacam a remoção de cutículas, a nail art e a simpatia da Leidy.</p></div>
+      <p class="vaga" data-reveal="settle"><strong>Tabela de serviços e preços</strong>Entra aqui com os dados do estúdio, junto com fotos reais dos trabalhos, antes de o site ir para o ar.</p>
+    </div>
+  </section>
+
+  <section id="onde" aria-labelledby="t-onde" style="padding-top:0">
+    <h2 data-reveal="lines" id="t-onde">Onde estamos</h2>
+    <div class="onde">
+      <div>
+        <p class="estado" data-estado aria-live="polite"><i></i><span>Horário</span></p>
+        <p><strong>Largo Fernandes Pratas<br>2135-252 Samora Correia</strong></p>
+        <table><tbody>
+          <tr data-dias="2,3,4,5"><td>Terça a sexta</td><td>10h00 – 19h00</td></tr>
+          <tr data-dias="6"><td>Sábado</td><td>9h00 – 16h00</td></tr>
+          <tr data-dias="0,1"><td>Domingo e segunda</td><td>Fechado</td></tr>
+        </tbody></table>
+        <a data-magnetic class="btn cheio" href="https://www.google.com/maps/search/?api=1&query=Ln%20nails%20%26%20beauty%2C%20Largo%20Fernandes%20Pratas%2C%20Samora%20Correia" target="_blank" rel="noopener">Abrir no Google Maps</a>
+      </div>
+      <iframe class="mapa" title="Mapa: Ln Nails & Beauty, Largo Fernandes Pratas, Samora Correia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Ln%20nails%20%26%20beauty%2C%20Largo%20Fernandes%20Pratas%2C%202135-252%20Samora%20Correia&z=16&output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Ln Nails &amp; Beauty · Largo Fernandes Pratas, Samora Correia · <a href="tel:+351964311633">964 311 633</a></span>
+  <span class="mini" aria-hidden="true"><span style="--c:#8E1F3F"></span><span style="--c:#B8325A"></span><span style="--c:#E6A3B3"></span><span style="--c:#E9CFC4"></span><span style="--c:#4E2A7A"></span><span style="--c:#1F1A1D"></span></span>
+  <span>Site por Ribatejo Sites</span>
+</footer>
+<p class="assinatura" aria-hidden="true">Ln Nails <em>&amp;</em> Beauty</p>
+
+<a class="flutua" href="https://wa.me/351964311633?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio." aria-label="Marcar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>WhatsApp</a>
+
+<script>
+(function(){
+  // Assinatura: tocar num verniz pinta a unha e o tom do site.
+  var root=document.documentElement, nome=document.querySelector('.nome-cor');
+  var botoes=document.querySelectorAll('.frasco');
+  botoes.forEach(function(b){
+    b.addEventListener('click',function(){
+      root.style.setProperty('--acc', b.dataset.cor);
+      root.style.setProperty('--acc-ink', b.dataset.texto);
+      botoes.forEach(function(x){x.setAttribute('aria-pressed', x===b ? 'true':'false')});
+      nome.textContent=b.dataset.nome;
+    });
+  });
+  var horario={0:null,1:null,2:[10,19],3:[10,19],4:[10,19],5:[10,19],6:[9,16]};
+  var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Lisbon',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  var o={};p.forEach(function(x){o[x.type]=x.value});
+  var dia={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday], h=(+o.hour%24)+(+o.minute)/60, j=horario[dia];
+  var aberto=!!j&&h>=j[0]&&h<j[1], el=document.querySelector('[data-estado]');
+  el.dataset.aberto=aberto?'sim':'nao';
+  el.querySelector('span').textContent=aberto?'Aberto agora · fecha às '+j[1]+'h00':'Fechado agora';
+  document.querySelectorAll('tr[data-dias]').forEach(function(tr){ if(tr.dataset.dias.split(',').indexOf(String(dia))>-1) tr.setAttribute('aria-current','date'); });
+})();
+</script>
+<script type="module">
+  import { init } from '../assets/motion-core.js';
+  import { initMagnetic } from '../assets/magnetic.js';
+  init();
+  initMagnetic();
+  import('../assets/frasco3d.js?v=3').then(m=>m.montarFrasco(document.querySelector('.frasco-caixa'))).catch(()=>{});
+</script>
+</body>
+</html>

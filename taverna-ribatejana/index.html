@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Taverna Ribatejana · Samora Correia</title>
+<meta name="description" content="Restaurante de família no Largo 25 de Abril, em Samora Correia. Grelha, comida caseira e doces da casa. 4,7 estrelas em 554 avaliações. Reserve pelo WhatsApp.">
+<meta property="og:title" content="Taverna Ribatejana · Samora Correia">
+<meta property="og:description" content="Grelha, comida caseira e doces da casa. Reserve pelo WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B140E'/%3E%3Crect x='12' y='4' width='8' height='24' rx='4' fill='%23EFE4D0'/%3E%3Cpath d='M12 9l8-4v4l-8 4zM12 17l8-4v4l-8 4zM12 25l8-4v3l-6 3z' fill='%23D2692E'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#1A1512">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=zodiak@700&display=swap" rel="stylesheet">
+<script>
+  (function (root) {
+    var saved = null, osReduce = false;
+    try { saved = localStorage.getItem('motion'); } catch (e) {}          /* storage can throw */
+    try { osReduce = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    var full = !osReduce && saved !== 'reduce';                           /* the OS "reduce" always wins */
+    root.setAttribute('data-motion', full ? 'full' : 'reduce');
+    if (full) root.classList.add('motion-ok');
+  })(document.documentElement);
+</script>
+
+<style>
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro] {
+    clip-path: inset(0 0 100% 0);                       /* clipped, not opacity: 0 */
+    animation: intro-deadline-clip 1ms var(--intro-deadline, 2s) forwards;
+  }
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro-item] {
+    translate: 0 var(--intro-shift, 1rem);              /* visible, just lower */
+    animation: intro-deadline-shift 1ms var(--intro-deadline, 2s) forwards;
+  }
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro-media] {
+    scale: var(--intro-scale, 1.06);                    /* visible, slightly over-scaled; clip it in its frame */
+    animation: intro-deadline-scale 1ms var(--intro-deadline, 2s) forwards;
+  }
+  @keyframes intro-deadline-clip  { to { clip-path: none; } }
+  @keyframes intro-deadline-shift { to { translate: none; } }
+  @keyframes intro-deadline-scale { to { scale: none; } }
+</style>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.186.1/+esm",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.186.1/examples/jsm/",
+    "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/+esm",
+    "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.js/+esm",
+    "gsap/SplitText": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.js/+esm",
+    "gsap/CustomEase": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CustomEase.js/+esm",
+    "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.3.26/+esm"
+  }
+}
+</script>
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/CustomEase.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/+esm">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/motion-core.css">
+<style>
+:root{
+  --ground:#1B140E; --ground-2:#271C13; --ink:#F2E6D4; --ink-2:#C2B29A;
+  --red:#D2692E; --blue:#D2692E; --white:#F2E6D4;
+  --display:"Zodiak",Georgia,"Times New Roman",serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease-micro:cubic-bezier(.33,1,.68,1); --ease-enter:cubic-bezier(.25,1,.5,1);
+  --dur-2:200ms; --dur-4:600ms;
+  --gutter:clamp(20px,4vw,56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--ground);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:var(--ground);padding:10px 14px;font-weight:700;z-index:20;text-decoration:none}
+.skip:focus{top:12px}
+.aviso{background:#F2D46B;color:#241b00;font-size:13px;line-height:1.4;text-align:center;padding:8px 16px}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px var(--gutter)}
+.marca{font-family:var(--display);font-weight:700;font-size:24px;text-decoration:none;line-height:1}
+.top nav{display:flex;gap:24px;align-items:center;font-size:15px;font-weight:600}
+.top nav a{text-decoration:none;color:var(--ink-2);transition:color var(--dur-2) var(--ease-micro);padding:10px 0}
+.top nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr;gap:clamp(24px,5vw,80px);align-items:center;padding:clamp(24px,6vw,72px) var(--gutter) clamp(40px,6vw,80px)}
+h1{font-family:var(--display);font-weight:700;letter-spacing:-.02em;font-size:clamp(34px,8vw,104px);line-height:.98;letter-spacing:-.005em}
+.fonte-ok h1{font-size:clamp(40px,min(8.6vw,12vh),120px);line-height:.98}
+.fonte-ok .palavra{font-size:clamp(64px,17vw,280px)}
+h1 span{display:block}
+.lead{max-width:38ch;color:var(--ink-2);font-size:19px;margin:28px 0 32px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;font-weight:700;font-size:17px;text-decoration:none;border:2px solid var(--ink);transition:background var(--dur-2) var(--ease-micro),color var(--dur-2) var(--ease-micro)}
+.btn{white-space:nowrap}
+.btn svg{width:20px;height:20px;flex:none}
+.btn.cheio{background:var(--ink);color:var(--ground)}
+.btn.cheio:hover{background:transparent;color:var(--ink)}
+.btn.vazio:hover{background:var(--ink);color:var(--ground)}
+.prova{margin-top:28px;font-size:15px;color:var(--ink-2)}
+.prova b{color:var(--ink);font-size:18px}
+
+/* signature: the pole */
+.poste{width:clamp(76px,8vw,104px);height:clamp(340px,58vh,520px);display:block;margin-right:clamp(0px,4vw,80px)}
+.listras{transform:translateY(var(--rodar,0px))}
+.faixa-poste{height:4px;background:linear-gradient(90deg,transparent,var(--red) 20%,var(--red) 80%,transparent)}
+
+.letreiro{border-bottom:1px solid #3a302a;padding:18px 0 14px;position:relative;--marquee-gap:2.2rem}
+.letreiro ul{list-style:none;font-family:var(--display);font-size:clamp(34px,5vw,72px);line-height:1;color:var(--ink)}
+.letreiro li[aria-hidden]{color:var(--red)}
+.pausa{display:block;margin:12px var(--gutter) 0 auto;position:relative;z-index:2;background:none;border:1px solid #3a302a;color:var(--ink-2);font:600 13px/1 var(--body);padding:8px 12px;min-height:32px;cursor:pointer}
+.pausa:hover{color:var(--ink);border-color:var(--ink-2)}
+.hero{position:relative;isolation:isolate;min-height:min(92vh,900px)}
+.hero-foto{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.hero-foto img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) contrast(1.05)}
+.hero-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(26,21,18,.96) 0%,rgba(26,21,18,.82) 45%,rgba(26,21,18,.35) 100%),linear-gradient(0deg,#1A1512 0%,rgba(26,21,18,0) 30%)}
+.galeria{display:grid;grid-template-columns:1.1fr 1fr .8fr;grid-template-rows:auto auto;gap:clamp(12px,2vw,24px);padding-top:0}
+.galeria figure{overflow:hidden;margin:0}
+.galeria img{width:100%;height:100%;object-fit:cover;display:block}
+.g1{grid-row:1/3}.g2{align-self:end}.g3{grid-row:1/3;margin-top:clamp(40px,8vw,120px)!important}
+.legenda-foto{grid-column:1/-1;font-size:13px;color:var(--ink-2)}
+@media (max-width:760px){.galeria{grid-template-columns:1fr 1fr}.g1{grid-row:auto;grid-column:1/-1}.g3{grid-row:auto;margin-top:0!important}.hero-foto::after{background:linear-gradient(180deg,rgba(26,21,18,.75),rgba(26,21,18,.95))}}
+.numeros{padding-top:clamp(48px,7vw,96px);padding-bottom:clamp(48px,7vw,96px)}
+.numeros ul{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,3vw,40px)}
+.numeros li{border-top:1px solid currentColor;padding-top:18px;display:flex;flex-direction:column;gap:6px}
+.numeros .num{font-family:var(--display);font-size:clamp(56px,8vw,128px);line-height:.9;letter-spacing:-.02em}
+.numeros .rot{font-size:15px;color:var(--ink-2)}
+@media (max-width:760px){.numeros ul{grid-template-columns:1fr}.numeros li{flex-direction:row;align-items:baseline;justify-content:space-between}}
+.poste-caixa{position:relative;width:clamp(150px,14vw,220px);height:clamp(420px,72vh,680px);margin-right:clamp(0px,3vw,60px);display:flex;align-items:center;justify-content:center}
+.poste-caixa .poste{margin:0;height:100%}
+.poste-caixa canvas{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .6s}
+.poste-caixa.tem-3d canvas{opacity:1}
+.poste-caixa.tem-3d .poste{visibility:hidden}
+@media (max-width:760px){.poste-caixa{width:76px;height:280px;margin:0}.hero{gap:12px;grid-template-columns:minmax(0,1fr) auto!important}}
+/* sections */
+section{padding:clamp(64px,9vw,128px) var(--gutter)}
+h2{font-family:var(--display);font-weight:700;letter-spacing:-.02em;font-size:clamp(44px,6.5vw,96px);line-height:.9;margin-bottom:clamp(28px,4vw,48px)}
+.citacoes{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.citacoes blockquote p{font-size:clamp(22px,2.6vw,34px);line-height:1.3}
+.citacoes .menor p{font-size:19px;line-height:1.5;color:var(--ink)}
+.citacoes .menor + .menor{margin-top:32px}
+.citacoes cite{display:block;margin-top:12px;font-style:normal;font-size:14px;color:var(--ink-2)}
+.servicos{background:var(--ground-2)}
+.servicos .grade{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px)}
+.destaque-serv{font-family:var(--display);font-weight:700;font-size:clamp(34px,4vw,56px);line-height:.95}
+.destaque-serv + p{color:var(--ink-2);margin-top:10px;max-width:40ch}
+.vaga{border:1.5px dashed var(--ink-2);padding:24px;color:var(--ink-2);max-width:44ch;align-self:start}
+.vaga strong{color:var(--ink);display:block;margin-bottom:6px}
+.onde{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,5vw,72px);align-items:start}
+.estado{display:inline-flex;align-items:center;gap:10px;font-weight:700;margin-bottom:22px;min-height:24px}
+.estado i{width:10px;height:10px;border-radius:50%;background:var(--ink-2)}
+.estado[data-aberto="sim"] i{background:#5CC27A}
+table{width:100%;border-collapse:collapse;margin-bottom:28px}
+td{padding:12px 0;border-bottom:1px solid #3a302a}
+td+td{text-align:right;color:var(--ink-2)}
+tr[aria-current] td{color:var(--ink);font-weight:700}
+.mapa{width:100%;aspect-ratio:4/3;border:0;background:var(--ground-2);display:block}
+footer{padding:48px var(--gutter) 0;overflow:hidden}
+.rodape{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:var(--ink-2);margin-bottom:24px}
+.palavra{font-family:var(--display);font-weight:700;letter-spacing:-.03em;font-size:clamp(48px,11vw,200px);line-height:.78;margin-bottom:-.06em;white-space:nowrap}
+.flutua{position:fixed;right:16px;bottom:16px;z-index:10;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 20px;background:#1F7A4A;color:#fff;font-weight:700;text-decoration:none;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+.flutua svg{width:22px;height:22px}
+
+@media (max-width:760px){
+  .top nav a:not(.tel){display:none}
+  .hero{grid-template-columns:1fr auto;align-items:start}
+  .poste{width:54px;height:300px;margin-top:6px}
+  .citacoes,.servicos .grade,.onde{grid-template-columns:1fr}
+  .lead{font-size:18px}
+  footer{padding-bottom:84px}
+}
+@media (prefers-reduced-motion:reduce){
+  .listras,.faixa-poste{transform:none!important;background-position:0 0!important}
+  *{transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar para o conteúdo</a>
+<div class="aviso" role="note">Prévia feita pela Ribatejo Sites para a Taverna Ribatejana. Ainda não é o site oficial.</div>
+
+<header class="top">
+  <a class="marca" href="#main">Taverna Ribatejana</a>
+  <nav aria-label="Principal">
+    <a href="#avaliacoes">Avaliações</a>
+    <a href="#onde">Onde estamos</a>
+    <a class="tel" href="tel:+351912890211">912 890 211</a>
+  </nav>
+</header>
+
+<main id="main" tabindex="-1">
+  <div class="hero">
+    <div class="hero-foto" aria-hidden="true"><img class="" src="https://images.unsplash.com/photo-1749429600130-d799b74f0a72?auto=format&fit=crop&w=1600&h=1000&q=70" srcset="https://images.unsplash.com/photo-1749429600130-d799b74f0a72?auto=format&fit=crop&w=1600&h=1000&q=70 1x, https://images.unsplash.com/photo-1749429600130-d799b74f0a72?auto=format&fit=crop&w=3200&h=2000&q=70 2x" width="1600" height="1000" alt="" fetchpriority="high" data-parallax="0.12"></div>
+    <div>
+      <h1 data-intro><span>Grelha à vista.</span><span>Doces caseiros.</span><span>Casa de família.</span></h1>
+      <p class="lead" data-intro-item>Restaurante de família no Largo 25 de Abril, em Samora Correia. É assim que os clientes descrevem a Taverna nas avaliações.</p>
+      <div class="acoes" data-intro-item>
+        <a data-magnetic class="btn cheio" data-wa href="https://wa.me/351912890211?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20mesa%20na%20Taverna%20Ribatejana.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>
+          Reservar pelo WhatsApp</a>
+        <a data-magnetic class="btn vazio" href="tel:+351912890211">Ligar 912 890 211</a>
+      </div>
+      <p class="prova" data-intro-item><b>4,7 ★</b> em 554 avaliações no Google</p>
+    </div>
+
+  </div>
+
+  <div class="faixa-poste" aria-hidden="true"></div>
+
+  <div class="letreiro" data-marquee data-marquee-speed="60" aria-label="Destaques das avaliações">
+    <div data-marquee-track>
+      <ul data-marquee-group>
+        <li>Grelha à vista</li><li aria-hidden="true">✦</li><li>Doces caseiros</li><li aria-hidden="true">✦</li><li>4,7 no Google</li><li aria-hidden="true">✦</li><li>Largo 25 de Abril</li><li aria-hidden="true">✦</li>
+      </ul>
+    </div>
+    <button class="pausa" type="button" data-marquee-toggle aria-pressed="false" hidden>Pausar</button>
+  </div>
+
+
+  <section class="numeros" aria-label="Em números">
+    <ul data-reveal="items"><li><span class="num">4,7</span><span class="rot">estrelas no Google</span></li><li><span class="num">554</span><span class="rot">avaliações de clientes</span></li><li><span class="num">6</span><span class="rot">dias por semana abertos</span></li></ul>
+  </section>
+
+  <section id="avaliacoes" aria-labelledby="t-aval">
+    <h2 data-reveal="lines" id="t-aval">Quem vem, volta</h2>
+    <div class="citacoes">
+      <blockquote data-reveal="settle"><p>“Experiência excecional. Comida autêntica, cozinhada na perfeição, com um atendimento pessoal. Um negócio de família com uma história incrível.”</p><cite>Avaliação no Google, traduzida do inglês</cite></blockquote>
+      <div>
+        <blockquote data-reveal="settle" class="menor"><p>“O menu de almoço é incrível: grandes pedaços de carne deliciosa, com muitos acompanhamentos, café e sobremesas caseiras no fim.”</p><cite>Avaliação no Google, traduzida e resumida</cite></blockquote>
+        <blockquote data-reveal="settle" class="menor"><p>“Bom ambiente, ótimo serviço e comida muito boa. A grelha é mesmo boa.”</p><cite>Avaliação no Google, traduzida</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="galeria" aria-label="Imagens">
+    <figure class="g1" data-reveal="image"><img class="" src="https://images.unsplash.com/photo-1679604858211-971f085ce361?auto=format&fit=crop&w=900&h=1100&q=70" srcset="https://images.unsplash.com/photo-1679604858211-971f085ce361?auto=format&fit=crop&w=900&h=1100&q=70 1x, https://images.unsplash.com/photo-1679604858211-971f085ce361?auto=format&fit=crop&w=1800&h=2200&q=70 2x" width="900" height="1100" alt="Carnes grelhadas servidas na brasa, com vinho tinto" loading="lazy" ></figure>
+    <figure class="g2" data-reveal="image"><img class="" src="https://images.unsplash.com/photo-1612871688811-45921bd20df1?auto=format&fit=crop&w=900&h=700&q=70" srcset="https://images.unsplash.com/photo-1612871688811-45921bd20df1?auto=format&fit=crop&w=900&h=700&q=70 1x, https://images.unsplash.com/photo-1612871688811-45921bd20df1?auto=format&fit=crop&w=1800&h=1400&q=70 2x" width="900" height="700" alt="Prato de carne grelhada com batatas fritas" loading="lazy" ></figure>
+    <figure class="g3" data-reveal="image"><img class="" src="https://images.unsplash.com/photo-1599342003613-0be0d35a0954?auto=format&fit=crop&w=700&h=900&q=70" srcset="https://images.unsplash.com/photo-1599342003613-0be0d35a0954?auto=format&fit=crop&w=700&h=900&q=70 1x, https://images.unsplash.com/photo-1599342003613-0be0d35a0954?auto=format&fit=crop&w=1400&h=1800&q=70 2x" width="700" height="900" alt="Mesa e cadeiras de madeira numa taverna" loading="lazy" ></figure>
+    <p class="legenda-foto">Imagens ilustrativas. No site final entram as fotos da Taverna e dos pratos.</p>
+  </section>
+
+  <section class="servicos" aria-labelledby="t-serv">
+    <h2 data-reveal="lines" id="t-serv">À mesa</h2>
+    <div class="grade">
+      <div>
+        <p class="destaque-serv">Almoço de segunda a sábado<br>Jantar à sexta e ao sábado</p>
+        <p>Os clientes elogiam a carne grelhada, as doses e os doces feitos em casa.</p>
+      </div>
+      <p class="vaga" data-reveal="settle"><strong>Ementa e preços</strong>Entram aqui com os pratos da casa antes de o site ir para o ar.</p>
+    </div>
+  </section>
+
+  <div class="faixa-poste" aria-hidden="true"></div>
+
+  <section id="onde" aria-labelledby="t-onde">
+    <h2 data-reveal="lines" id="t-onde">Onde estamos</h2>
+    <div class="onde">
+      <div>
+        <p class="estado" data-estado aria-live="polite"><i></i><span>Horário</span></p>
+        <p style="margin-bottom:8px"><strong>Largo 25 de Abril, 1 (Largo do Calvário)<br>2135-038 Samora Correia</strong></p>
+        <table>
+          <tbody>
+            <tr data-dias="1,2,3,4"><td>Segunda a quinta</td><td>12h00 – 15h00</td></tr>
+            <tr data-dias="5"><td>Sexta</td><td>12h00 – 22h00</td></tr>
+            <tr data-dias="6"><td>Sábado</td><td>12h00 – 23h00</td></tr>
+            <tr data-dias="0"><td>Domingo</td><td>Fechado</td></tr>
+          </tbody>
+        </table>
+        <div class="acoes">
+          <a data-magnetic class="btn cheio" href="https://www.google.com/maps/search/?api=1&query=Taverna%20Ribatejana%2C%20Largo%2025%20de%20Abril%2C%20Samora%20Correia" target="_blank" rel="noopener">Abrir no Google Maps</a>
+        </div>
+      </div>
+      <iframe class="mapa" title="Mapa: Taverna Ribatejana, Largo 25 de Abril, Samora Correia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Taverna%20Ribatejana%2C%20Largo%2025%20de%20Abril%2C%20Samora%20Correia&z=16&output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="rodape"><span>Taverna Ribatejana · Largo 25 de Abril, Samora Correia · <a href="tel:+351912890211">912 890 211</a></span><span>Site por Ribatejo Sites</span></div>
+  <div class="faixa-poste" aria-hidden="true" style="margin:0 calc(var(--gutter)*-1) 20px"></div>
+  <p class="palavra" aria-hidden="true">Taverna</p>
+</footer>
+
+<a class="flutua" href="https://wa.me/351912890211?text=Ol%C3%A1!%20Gostaria%20de%20reservar%20mesa%20na%20Taverna%20Ribatejana." aria-label="Reservar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>WhatsApp</a>
+
+<script>
+(function(){
+  if(document.fonts&&document.fonts.load){document.fonts.load('700 1em Zodiak').then(function(f){if(f.length)document.documentElement.classList.add('fonte-ok')})}
+  // Assinatura: o poste gira com o scroll do visitante.
+  var reduz = matchMedia('(prefers-reduced-motion: reduce)');
+  var root = document.documentElement, pedido = false;
+  function aplicar(){ pedido=false; if(reduz.matches) return;
+    var y = window.scrollY;
+    root.style.setProperty('--rodar', ((y*0.6) % 192) + 'px');
+    root.style.setProperty('--rodar-x', (-(y*0.5) % 148) + 'px');
+  }
+  addEventListener('scroll', function(){ if(!pedido){ pedido=true; requestAnimationFrame(aplicar);} }, {passive:true});
+
+  // Estado aberto/fechado na hora de Portugal.
+  var horario = {0:null,1:[12,15],2:[12,15],3:[12,15],4:[12,15],5:[12,22],6:[12,23]};
+  function agoraPT(){
+    var p = new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Lisbon',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var o={}; p.forEach(function(x){o[x.type]=x.value});
+    var dias={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6};
+    return {dia:dias[o.weekday], h:(+o.hour%24)+(+o.minute)/60};
+  }
+  var a = agoraPT(), h = horario[a.dia], el = document.querySelector('[data-estado]');
+  var aberto = !!h && a.h>=h[0] && a.h<h[1];
+  el.dataset.aberto = aberto ? 'sim':'nao';
+  el.querySelector('span').textContent = aberto ? 'Aberto agora · fecha às '+h[1]+'h00' : 'Fechado agora';
+  document.querySelectorAll('tr[data-dias]').forEach(function(tr){
+    if(tr.dataset.dias.split(',').indexOf(String(a.dia))>-1) tr.setAttribute('aria-current','date');
+  });
+})();
+</script>
+<script type="module">
+  import { init } from '../assets/motion-core.js';
+  import { initMagnetic } from '../assets/magnetic.js';
+  init();
+  initMagnetic();
+</script>
+</body>
+</html>
