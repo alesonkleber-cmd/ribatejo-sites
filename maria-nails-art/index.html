@@ -11,6 +11,53 @@
 <meta name="theme-color" content="#EDE9EA">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&display=swap" rel="stylesheet">
+<script>
+  (function (root) {
+    var saved = null, osReduce = false;
+    try { saved = localStorage.getItem('motion'); } catch (e) {}          /* storage can throw */
+    try { osReduce = matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    var full = !osReduce && saved !== 'reduce';                           /* the OS "reduce" always wins */
+    root.setAttribute('data-motion', full ? 'full' : 'reduce');
+    if (full) root.classList.add('motion-ok');
+  })(document.documentElement);
+</script>
+
+<style>
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro] {
+    clip-path: inset(0 0 100% 0);                       /* clipped, not opacity: 0 */
+    animation: intro-deadline-clip 1ms var(--intro-deadline, 2s) forwards;
+  }
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro-item] {
+    translate: 0 var(--intro-shift, 1rem);              /* visible, just lower */
+    animation: intro-deadline-shift 1ms var(--intro-deadline, 2s) forwards;
+  }
+  :root[data-motion="full"]:not([data-intro-owned]) [data-intro-media] {
+    scale: var(--intro-scale, 1.06);                    /* visible, slightly over-scaled; clip it in its frame */
+    animation: intro-deadline-scale 1ms var(--intro-deadline, 2s) forwards;
+  }
+  @keyframes intro-deadline-clip  { to { clip-path: none; } }
+  @keyframes intro-deadline-shift { to { translate: none; } }
+  @keyframes intro-deadline-scale { to { scale: none; } }
+</style>
+
+<script type="importmap">
+{
+  "imports": {
+    "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/+esm",
+    "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.js/+esm",
+    "gsap/SplitText": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.js/+esm",
+    "gsap/CustomEase": "https://cdn.jsdelivr.net/npm/gsap@3.15.0/CustomEase.js/+esm",
+    "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.3.26/+esm"
+  }
+}
+</script>
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/ScrollTrigger.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/SplitText.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/gsap@3.15.0/CustomEase.js/+esm">
+<link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/lenis@1.3.26/+esm">
+<link rel="stylesheet" href="../assets/tokens.css">
+<link rel="stylesheet" href="../assets/motion-core.css">
 <style>
 :root{
   --ground:#EDE9EA; --ground-2:#E3DDDF; --ink:#2B1822; --ink-2:#6B5560;
@@ -22,7 +69,6 @@
   --gutter:clamp(20px,4vw,56px);
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html:not(:has(:focus-visible)){scroll-behavior:smooth}
 body{background:var(--ground);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
@@ -88,6 +134,8 @@ tr[aria-current] td{color:var(--ink);font-weight:700}
 footer{padding:48px var(--gutter);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:14px;color:var(--ink-2);border-top:1px solid #d3cacd}
 .mini{display:flex;gap:6px}
 .mini span{width:14px;height:20px;border-radius:5px;background:var(--c)}
+.assinatura{font-family:var(--display);font-size:clamp(56px,13vw,220px);line-height:.8;letter-spacing:-.03em;white-space:nowrap;padding:0 var(--gutter);margin-bottom:-.08em;overflow:hidden;color:var(--ink)}
+.assinatura em{font-style:normal;color:var(--acc);transition:color var(--dur-3)}
 .flutua{position:fixed;right:16px;bottom:16px;z-index:10;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 20px;background:#1F7A4A;color:#fff;font-weight:700;text-decoration:none;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
 .flutua svg{width:22px;height:22px}
 @media (max-width:760px){
@@ -101,7 +149,8 @@ footer{padding:48px var(--gutter);display:flex;flex-wrap:wrap;justify-content:sp
   .frasco{width:44px}.frasco b{width:34px;height:36px}.frasco i{width:13px;height:18px}
   .nome-cor{display:none}
   .aval .linha,.serv,.onde{grid-template-columns:1fr}
-  footer{padding-bottom:96px}
+  footer{padding-bottom:24px}
+  .assinatura{padding-bottom:84px;margin-bottom:0}
 }
 @media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
 </style>
@@ -122,19 +171,19 @@ footer{padding:48px var(--gutter);display:flex;flex-wrap:wrap;justify-content:sp
 <main id="main" tabindex="-1">
   <div class="hero">
     <div>
-      <h1>Unhas lindíssimas, com cuidado em cada detalhe.</h1>
-      <p class="lead">Estúdio de unhas na Rua Guerra Junqueiro, em Samora Correia. É assim que as clientes descrevem o trabalho da Maria.</p>
-      <div class="acoes">
-        <a class="btn cheio" href="https://wa.me/351918258432?text=Ol%C3%A1%20Maria!%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio.">
+      <h1 data-intro>Unhas lindíssimas, com cuidado em cada detalhe.</h1>
+      <p class="lead" data-intro-item>Estúdio de unhas na Rua Guerra Junqueiro, em Samora Correia. É assim que as clientes descrevem o trabalho da Maria.</p>
+      <div class="acoes" data-intro-item>
+        <a data-magnetic class="btn cheio" href="https://wa.me/351918258432?text=Ol%C3%A1%20Maria!%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio.">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>
           Marcar pelo WhatsApp</a>
-        <a class="btn vazio" href="tel:+351918258432">Ligar</a>
+        <a data-magnetic class="btn vazio" href="tel:+351918258432">Ligar</a>
       </div>
-      <p class="prova"><b>5,0 ★</b> em 18 avaliações no Google</p>
+      <p class="prova" data-intro-item><b>5,0 ★</b> em 18 avaliações no Google</p>
     </div>
 
     <div class="palco">
-      <svg class="unha" viewBox="0 0 200 300" role="img" aria-label="Unha pintada com a cor escolhida">
+      <svg data-intro-media class="unha" viewBox="0 0 200 300" role="img" aria-label="Unha pintada com a cor escolhida">
         <path d="M100 8C46 8 18 70 18 150v150h164V150C182 70 154 8 100 8Z" fill="#E7D3CB"/>
         <path class="cor" d="M100 22C56 22 34 78 34 150v150h132V150C166 78 144 22 100 22Z"/>
         <path d="M70 60c-14 18-20 46-20 80" stroke="#fff" stroke-opacity=".45" stroke-width="10" stroke-linecap="round" fill="none"/>
@@ -153,23 +202,23 @@ footer{padding:48px var(--gutter);display:flex;flex-wrap:wrap;justify-content:sp
   </div>
 
   <section id="avaliacoes" class="aval" aria-labelledby="t-aval">
-    <h2 id="t-aval">O que dizem as clientes</h2>
+    <h2 data-reveal="lines" id="t-aval">O que dizem as clientes</h2>
     <div class="linha">
-      <blockquote class="grande"><p>A Maria é super querida e faz unhas lindíssimas! O atendimento é excelente e o cuidado com cada detalhe nota-se em cada trabalho.</p><cite>Avaliação no Google</cite></blockquote>
-      <blockquote class="peq"><p>“Profissionalismo, carismática… Que continue assim. Satisfeita.”</p><cite>Avaliação no Google</cite></blockquote>
+      <blockquote data-reveal="settle" class="grande"><p>A Maria é super querida e faz unhas lindíssimas! O atendimento é excelente e o cuidado com cada detalhe nota-se em cada trabalho.</p><cite>Avaliação no Google</cite></blockquote>
+      <blockquote data-reveal="settle" class="peq"><p>“Profissionalismo, carismática… Que continue assim. Satisfeita.”</p><cite>Avaliação no Google</cite></blockquote>
     </div>
   </section>
 
   <section aria-labelledby="t-serv">
-    <h2 id="t-serv">Serviços</h2>
+    <h2 data-reveal="lines" id="t-serv">Serviços</h2>
     <div class="serv">
       <div class="texto"><p>As clientes destacam o atendimento, o cuidado com os detalhes e os preços acessíveis.</p></div>
-      <p class="vaga"><strong>Tabela de serviços e preços</strong>Entra aqui com os dados do estúdio, junto com fotos reais dos trabalhos, antes de o site ir para o ar.</p>
+      <p class="vaga" data-reveal="settle"><strong>Tabela de serviços e preços</strong>Entra aqui com os dados do estúdio, junto com fotos reais dos trabalhos, antes de o site ir para o ar.</p>
     </div>
   </section>
 
   <section id="onde" aria-labelledby="t-onde" style="padding-top:0">
-    <h2 id="t-onde">Onde estamos</h2>
+    <h2 data-reveal="lines" id="t-onde">Onde estamos</h2>
     <div class="onde">
       <div>
         <p class="estado" data-estado aria-live="polite"><i></i><span>Horário</span></p>
@@ -178,7 +227,7 @@ footer{padding:48px var(--gutter);display:flex;flex-wrap:wrap;justify-content:sp
           <tr data-dias="1,2,3,4,5,6"><td>Segunda a sábado</td><td>9h00 – 19h00</td></tr>
           <tr data-dias="0"><td>Domingo</td><td>Fechado</td></tr>
         </tbody></table>
-        <a class="btn cheio" href="https://www.google.com/maps/search/?api=1&query=Maria%20Nails%20and%20Art%2C%20R.%20Guerra%20Junqueiro%204%2C%20Samora%20Correia" target="_blank" rel="noopener">Abrir no Google Maps</a>
+        <a data-magnetic class="btn cheio" href="https://www.google.com/maps/search/?api=1&query=Maria%20Nails%20and%20Art%2C%20R.%20Guerra%20Junqueiro%204%2C%20Samora%20Correia" target="_blank" rel="noopener">Abrir no Google Maps</a>
       </div>
       <iframe class="mapa" title="Mapa: Maria Nails and Art, R. Guerra Junqueiro 4, Samora Correia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
         src="https://maps.google.com/maps?q=Maria%20Nails%20and%20Art%2C%20R.%20Guerra%20Junqueiro%204%2C%202135-131%20Samora%20Correia&z=16&output=embed"></iframe>
@@ -191,6 +240,7 @@ footer{padding:48px var(--gutter);display:flex;flex-wrap:wrap;justify-content:sp
   <span class="mini" aria-hidden="true"><span style="--c:#8E1F3F"></span><span style="--c:#B8325A"></span><span style="--c:#E6A3B3"></span><span style="--c:#E9CFC4"></span><span style="--c:#4E2A7A"></span><span style="--c:#1F1A1D"></span></span>
   <span>Site por Ribatejo Sites</span>
 </footer>
+<p class="assinatura" aria-hidden="true">Maria Nails <em>and</em> Art</p>
 
 <a class="flutua" href="https://wa.me/351918258432?text=Ol%C3%A1%20Maria!%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio." aria-label="Marcar pelo WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>WhatsApp</a>
@@ -217,6 +267,12 @@ footer{padding:48px var(--gutter);display:flex;flex-wrap:wrap;justify-content:sp
   el.querySelector('span').textContent=aberto?'Aberto agora · fecha às '+j[1]+'h00':'Fechado agora';
   document.querySelectorAll('tr[data-dias]').forEach(function(tr){ if(tr.dataset.dias.split(',').indexOf(String(dia))>-1) tr.setAttribute('aria-current','date'); });
 })();
+</script>
+<script type="module">
+  import { init } from '../assets/motion-core.js';
+  import { initMagnetic } from '../assets/magnetic.js';
+  init();
+  initMagnetic();
 </script>
 </body>
 </html>
