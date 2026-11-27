@@ -175,7 +175,9 @@ footer{padding:48px var(--gutter);display:flex;flex-wrap:wrap;justify-content:sp
   .cartao .unha{width:58px}
   .frasco-caixa{width:84px;height:120px}
   .dica3d{display:none!important}
-  .cartao .frascos{width:auto;flex:1;gap:2px;min-width:0;justify-content:space-between}
+  .cartao{flex-wrap:nowrap!important;align-items:center}
+  .cartao .frascos{width:auto;flex:1;min-width:0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px 4px;justify-items:center}
+  .cartao .frascos legend{grid-column:1/-1}
   .cartao .frasco{width:31px}.cartao .frasco b{width:28px;height:30px}.cartao .frasco i{width:11px;height:15px}
   .unha{width:84px}
   .frascos{width:100%}
