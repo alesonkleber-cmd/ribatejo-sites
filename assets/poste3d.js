@@ -53,13 +53,13 @@ export async function montarPoste(caixa) {
   // Núcleo listrado
   const nucleo = new THREE.Mesh(
     new THREE.CylinderGeometry(R * 0.92, R * 0.92, H, 96, 1, true),
-    new THREE.MeshStandardMaterial({ map: listras, roughness: 0.45, metalness: 0 })
+    new THREE.MeshStandardMaterial({ map: listras, roughness: 0.38, metalness: 0, emissive: '#ffffff', emissiveMap: listras, emissiveIntensity: 0.18 })
   );
   poste.add(nucleo);
   // Tubo de vidro por fora
   const vidro = new THREE.Mesh(
     new THREE.CylinderGeometry(R, R, H, 96, 1, true),
-    new THREE.MeshPhysicalMaterial({ color: '#ffffff', roughness: 0.05, transmission: 1, thickness: 0.3, ior: 1.45, transparent: true, opacity: 0.35, clearcoat: 1 })
+    new THREE.MeshPhysicalMaterial({ color: '#ffffff', roughness: 0.05, transmission: 1, thickness: 0.3, ior: 1.45, transparent: true, opacity: 0.16, clearcoat: 1 })
   );
   poste.add(vidro);
   // Tampas metálicas (latão escurecido)
@@ -82,9 +82,10 @@ export async function montarPoste(caixa) {
     renderer.setSize(w, h, false);
     camara.aspect = w / h;
     // enquadra o poste inteiro conforme a proporção
-    const alturaVisivel = H + 1.4;
-    const dist = (alturaVisivel / 2) / Math.tan((camara.fov * Math.PI / 180) / 2);
-    camara.position.z = Math.max(dist, (R * 6) / camara.aspect / Math.tan((camara.fov * Math.PI / 180) / 2));
+    const t = Math.tan((camara.fov * Math.PI / 180) / 2);
+    const distH = ((H + 1.25) / 2) / t;
+    const distW = (R * 1.7) / (t * camara.aspect);
+    camara.position.z = Math.max(distH, distW);
     camara.updateProjectionMatrix();
   }
 
