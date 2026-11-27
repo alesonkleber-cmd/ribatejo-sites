@@ -1,117 +1,243 @@
 <!DOCTYPE html>
-<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Barbearia Mister M · Samora Correia</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&display=swap" rel="stylesheet">
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Barbearia Mister M · Samora Correia</title>
+<meta name="description" content="Barbearia em Samora Correia. Começa a horas, acaba a horas. 5,0 estrelas em 68 avaliações no Google. Marque pelo WhatsApp.">
+<meta property="og:title" content="Barbearia Mister M · Samora Correia">
+<meta property="og:description" content="Começa a horas, acaba a horas. Marque pelo WhatsApp.">
+<meta name="theme-color" content="#E4EBE8">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#F2F5F3;--bg2:#E3EBE7;--txt:#12343B;--sub:#4E6A6F;--acc:#2FA58F;--acc2:#12343B;--btnTxt:#FFFFFF;--fd:'Archivo', system-ui, sans-serif;--fb:'Archivo', system-ui, sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
-.aviso{background:#FFE27A;color:#2a2200;font-size:13px;text-align:center;padding:8px 14px}
-.w{max-width:1080px;margin:0 auto;padding:0 22px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-nav .marca{font-family:var(--fd);font-size:22px;text-decoration:none;}
-nav .ligar{font-weight:700;text-decoration:none;font-size:15px;border-bottom:2px solid var(--acc)}
-.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:40px 0 70px}
-h1{font-family:var(--fd);font-weight:900;font-size:clamp(44px,8vw,92px);line-height:1.02;letter-spacing:-0.02em;margin-bottom:22px;}
-.intro{font-size:19px;color:var(--sub);max-width:34ch;margin-bottom:30px}
-.acoes{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:var(--btnTxt);font-weight:700;text-decoration:none;padding:16px 26px;border-radius:10px;font-size:17px}
-.btn svg{width:20px;height:20px}
-.btn.sec{background:transparent;color:var(--txt);box-shadow:inset 0 0 0 2px var(--txt)}
-.prova{margin-top:28px;font-size:15px;color:var(--sub)}
-.prova strong{color:var(--txt);font-size:17px}
-.estrelas{color:var(--acc);letter-spacing:2px}
-.destaque{display:flex;justify-content:center}
-section{padding:72px 0}
-.faixa{background:var(--bg2)}
-h2{font-family:var(--fd);font-weight:800;font-size:clamp(32px,5vw,52px);line-height:1.1;margin-bottom:32px;}
-.servicos{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
-.servico{padding:20px 0;border-top:1px solid color-mix(in srgb,var(--txt) 18%,transparent)}
-.servico h3{font-size:19px;margin-bottom:4px}
-.servico p{color:var(--sub);font-size:16px}
-.obs{color:var(--sub);font-size:14px;margin-top:22px}
-.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:p}
-.passo{counter-increment:p}
-.passo::before{content:counter(p);display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--acc);color:var(--btnTxt);font-weight:800;margin-bottom:14px;font-size:19px}
-.passo h3{font-size:19px;margin-bottom:4px}
-.passo p{color:var(--sub);font-size:16px}
-.citacao{font-family:var(--fd);font-size:clamp(26px,3.6vw,40px);line-height:1.25;max-width:26ch;margin-bottom:18px;}
-.outras{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
-.outras p{color:var(--sub)}
-.fonte{font-size:14px;color:var(--sub);margin-top:6px}
-.local{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:start}
-table{width:100%;border-collapse:collapse;margin:8px 0 26px}
-td{padding:10px 0;border-bottom:1px solid color-mix(in srgb,var(--txt) 15%,transparent)}
-td+td{text-align:right;color:var(--sub)}
-.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:18px;background:var(--bg2)}
-.final{text-align:center}
-.final h2{margin-bottom:18px}
-.final p{color:var(--sub);margin-bottom:28px}
-footer{padding:30px 0 100px;font-size:14px;color:var(--sub);text-align:center}
-.flutua{position:fixed;right:16px;bottom:16px;z-index:5;background:#25D366;color:#fff;border-radius:999px;padding:14px 18px;display:flex;gap:8px;align-items:center;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25)}
-.flutua svg{width:22px;height:22px}
-/* destaques */
-.poste{height:min(420px,60vh)}
-.gira{animation:sobe 6s linear infinite}
-@keyframes sobe{to{transform:translateY(160px)}}
-.frascos{display:grid;grid-template-columns:repeat(3,64px);gap:18px 22px}
-.frasco{display:flex;flex-direction:column;align-items:center}
-.frasco i{width:22px;height:34px;background:#2b1a20;border-radius:6px 6px 2px 2px}
-.frasco b{width:56px;height:62px;background:var(--c);border-radius:14px;box-shadow:inset -8px -10px 0 rgba(0,0,0,.12),inset 8px 8px 0 rgba(255,255,255,.25)}
-.relogio{width:min(300px,70vw);color:var(--txt)}
-.ponteiro{transform-origin:100px 100px;animation:rodar 12s linear infinite}
-@keyframes rodar{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){.gira,.ponteiro{animation:none}}
-@media(max-width:760px){
- .hero{grid-template-columns:1fr;padding-top:16px;gap:28px}
- .destaque{order:-1;justify-content:flex-start}
- .poste{height:260px;transform:rotate(90deg);transform-origin:center;margin:-100px 0 -100px 100px}
- .frascos{grid-template-columns:repeat(6,44px);gap:10px}
- .frasco b{width:40px;height:44px;border-radius:10px}.frasco i{width:16px;height:24px}
- .relogio{width:140px}
- .servicos,.passos,.outras,.local{grid-template-columns:1fr}
- section{padding:56px 0}
+:root{
+  --ground:#E4EBE8; --ground-2:#D7E0DC; --ink:#0E2B29; --ink-2:#4A6260; --acc:#1E7466;
+  --display:"Cabinet Grotesk","Arial Narrow",system-ui,sans-serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease-micro:cubic-bezier(.33,1,.68,1); --ease-move:cubic-bezier(.76,0,.24,1);
+  --dur-2:200ms; --dur-4:600ms; --dur-5:900ms;
+  --gutter:clamp(20px,4vw,56px);
 }
-</style></head><body>
-<div class="aviso">Prévia feita pela Ribatejo Sites para Barbearia Mister M. Ainda não é o site oficial.</div>
-<div class="w"><nav><a class="marca" href="#">Barbearia Mister M</a><a class="ligar" href="tel:+351916010372">+351 916 010 372</a></nav>
-<div class="hero"><div>
-<h1>Começa a horas.<br>Acaba a horas.</h1><p class="intro">Marca online, chega e é atendido. Corte e barba com profissionalismo, espaço limpo e um café à sua espera.</p>
-<div class="acoes"><a class="btn" href="https://wa.me/351916010372?text=Ol%C3%A1%21%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio%20na%20Barbearia%20Mister%20M."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>Marcar pelo WhatsApp</a><a class="btn sec" href="#onde">Como chegar</a></div>
-<p class="prova"><span class="estrelas">★★★★★</span> <strong>5,0</strong> de 68 avaliações no Google</p>
-</div><div class="destaque"><svg class="relogio" viewBox="0 0 200 200" aria-hidden="true">
-<circle cx="100" cy="100" r="92" fill="none" stroke="currentColor" stroke-width="4"/>
-<line x1="100" y1="14" x2="100" y2="26" stroke="currentColor" stroke-width="4" transform="rotate(0 100 100)"/><line x1="100" y1="14" x2="100" y2="20" stroke="currentColor" stroke-width="2" transform="rotate(30 100 100)"/><line x1="100" y1="14" x2="100" y2="20" stroke="currentColor" stroke-width="2" transform="rotate(60 100 100)"/><line x1="100" y1="14" x2="100" y2="26" stroke="currentColor" stroke-width="4" transform="rotate(90 100 100)"/><line x1="100" y1="14" x2="100" y2="20" stroke="currentColor" stroke-width="2" transform="rotate(120 100 100)"/><line x1="100" y1="14" x2="100" y2="20" stroke="currentColor" stroke-width="2" transform="rotate(150 100 100)"/><line x1="100" y1="14" x2="100" y2="26" stroke="currentColor" stroke-width="4" transform="rotate(180 100 100)"/><line x1="100" y1="14" x2="100" y2="20" stroke="currentColor" stroke-width="2" transform="rotate(210 100 100)"/><line x1="100" y1="14" x2="100" y2="20" stroke="currentColor" stroke-width="2" transform="rotate(240 100 100)"/><line x1="100" y1="14" x2="100" y2="26" stroke="currentColor" stroke-width="4" transform="rotate(270 100 100)"/><line x1="100" y1="14" x2="100" y2="20" stroke="currentColor" stroke-width="2" transform="rotate(300 100 100)"/><line x1="100" y1="14" x2="100" y2="20" stroke="currentColor" stroke-width="2" transform="rotate(330 100 100)"/>
-<path d="M100 100 L100 8 A92 92 0 0 1 192 100 Z" fill="var(--acc)" opacity=".35"/>
-<line x1="100" y1="100" x2="100" y2="40" stroke="currentColor" stroke-width="6" stroke-linecap="round" class="ponteiro"/>
-<line x1="100" y1="100" x2="150" y2="100" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
-<circle cx="100" cy="100" r="7" fill="currentColor"/></svg></div></div></div>
+*{box-sizing:border-box;margin:0;padding:0}
+html:not(:has(:focus-visible)){scroll-behavior:smooth}
+body{background:var(--ground);color:var(--ink);font:400 17px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;font-weight:700;z-index:20;text-decoration:none}
+.skip:focus{top:12px}
+.aviso{background:#F2D46B;color:#241b00;font-size:13px;line-height:1.4;text-align:center;padding:8px 16px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px var(--gutter);border-bottom:1px solid #c5d1cc}
+.marca{font-family:var(--display);font-weight:800;font-size:22px;text-decoration:none;letter-spacing:-.01em}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--ink);text-decoration:none;padding:8px 0}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--ink-2)}
+[data-aberto="sim"] .chip i, .chip[data-aberto="sim"] i{background:#1E9E6A}
 
-<section class="faixa"><div class="w"><h2>Serviços</h2><div class="servicos"><div class="servico"><h3>Corte de cabelo</h3><p>Máquina, tesoura ou degradê.</p></div><div class="servico"><h3>Barba</h3><p>Aparada e desenhada à navalha.</p></div><div class="servico"><h3>Corte + barba</h3><p>Tudo numa só marcação.</p></div><div class="servico"><h3>Corte infantil</h3><p>Com paciência para os mais novos.</p></div><div class="servico"><h3>Acabamento</h3><p>Contornos entre cortes.</p></div><div class="servico"><h3>Sobrancelha</h3><p>Limpeza rápida.</p></div></div>
-<p class="obs">Preços e lista final combinados consigo antes de o site ir para o ar.</p></div></section>
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,6vw,96px);align-items:center;padding:clamp(32px,6vw,88px) var(--gutter) clamp(56px,8vw,112px)}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(50px,7.4vw,124px);line-height:.92;letter-spacing:-.03em}
+h1 span{display:block}
+.fonte-h1{font-size:14px;color:var(--ink-2);margin-top:14px}
+.lead{color:var(--ink-2);font-size:19px;max-width:38ch;margin:22px 0 30px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;border-radius:12px;font-weight:700;font-size:17px;text-decoration:none;transition:background-color var(--dur-2) var(--ease-micro),color var(--dur-2) var(--ease-micro)}
+.btn svg{width:20px;height:20px}
+.btn.cheio{background:var(--ink);color:var(--ground)}
+.btn.cheio:hover{background:var(--acc)}
+.btn.vazio{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.vazio:hover{background:var(--ink);color:var(--ground)}
+.prova{margin-top:26px;font-size:15px;color:var(--ink-2)}
+.prova b{color:var(--ink);font-size:18px}
 
-<section><div class="w"><h2>Marcar é simples</h2><div class="passos">
-<div class="passo"><h3>Toque em "Marcar"</h3><p>Abre o WhatsApp com a mensagem já escrita.</p></div>
-<div class="passo"><h3>Escolha o horário</h3><p>Diga o serviço e o dia que prefere.</p></div>
-<div class="passo"><h3>Apareça</h3><p>Recebe a confirmação e é só vir.</p></div>
-</div></div></section>
+/* assinatura: o relógio */
+.relogio-box{display:flex;flex-direction:column;align-items:center;gap:16px}
+.relogio{width:min(340px,100%);height:auto;color:var(--ink)}
+.arco{fill:var(--acc);opacity:.28;transition:d var(--dur-5) var(--ease-move)}
+.ponteiro{transform-origin:150px 150px;transition:transform var(--dur-5) var(--ease-move)}
+.legenda{font-size:15px;color:var(--ink-2);text-align:center;min-height:3em}
+.legenda b{color:var(--ink)}
 
-<section class="faixa"><div class="w"><h2>Quem vem, volta</h2>
-<p class="citacao">“Agendamento sempre sem falhas. Começa a horas e acaba a horas. Tudo muito limpo.”</p><p class="fonte">Avaliação no Google</p>
-<div class="outras"><div><p>“Ofereceram logo uma água ou café. O atendimento é muito mais que 5 estrelas.”</p><p class="fonte">Avaliação no Google</p></div><div><p>“Ambiente aconchegante para cortar o cabelo e fazer a barba. Muito bem atendido.”</p><p class="fonte">Avaliação no Google</p></div></div>
-</div></section>
+section{padding:clamp(64px,9vw,128px) var(--gutter)}
+h2{font-family:var(--display);font-weight:800;font-size:clamp(40px,5.4vw,80px);line-height:.95;letter-spacing:-.025em;margin-bottom:clamp(24px,4vw,44px)}
+.horario{background:var(--ground-2)}
+.horario .grade{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px);align-items:start}
+.dias-mini{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.dm{appearance:none;border:0;font:inherit;font-size:14px;font-weight:700;min-width:44px;min-height:44px;border-radius:10px;background:transparent;color:var(--ink-2);box-shadow:inset 0 0 0 1.5px #b9c7c1;cursor:pointer;transition:background-color var(--dur-2) var(--ease-micro),color var(--dur-2) var(--ease-micro)}
+.dm:hover{color:var(--ink)}
+.dm[aria-pressed="true"]{background:var(--ink);color:var(--ground);box-shadow:none}
+.tabela{width:100%;border-collapse:collapse}
+.tabela td{padding:14px 4px;border-bottom:1px solid #b9c7c1}
+.tabela td+td{text-align:right;color:var(--ink-2);font-variant-numeric:tabular-nums}
+.tabela tr[aria-current] td{font-weight:700;color:var(--ink)}
+/*x*/.dia{appearance:none;background:none;border:0;border-bottom:1px solid #b9c7c1;font:inherit;color:inherit;display:flex;justify-content:space-between;gap:16px;padding:16px 4px;cursor:pointer;text-align:left;min-height:56px;align-items:center;transition:background-color var(--dur-2) var(--ease-micro)}
+.dia:hover{background:rgba(14,43,41,.05)}
+.dia span:last-child{color:var(--ink-2);font-variant-numeric:tabular-nums;text-align:right}
+.dia[aria-pressed="true"]{font-weight:700}
+.dia[aria-pressed="true"] span:last-child{color:var(--ink)}
+.dica{font-size:14px;color:var(--ink-2);margin-top:14px}
+.aval .linha{display:grid;grid-template-columns:1.4fr 1fr;gap:clamp(28px,5vw,72px)}
+.aval blockquote p{font-size:19px}
+.aval .grande p{font-family:var(--display);font-weight:500;font-size:clamp(26px,3vw,40px);line-height:1.2;letter-spacing:-.01em}
+.aval cite{display:block;font-style:normal;font-size:14px;color:var(--ink-2);margin-top:12px}
+.aval .peq + .peq{margin-top:28px}
+.vaga{border:1.5px dashed var(--ink-2);border-radius:12px;padding:24px;color:var(--ink-2);max-width:44ch}
+.vaga strong{color:var(--ink);display:block;margin-bottom:6px}
+.onde{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,5vw,72px);align-items:start}
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:16px;background:var(--ground-2);display:block}
+footer{padding:40px var(--gutter);display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;font-size:14px;color:var(--ink-2);border-top:1px solid #c5d1cc}
+.flutua{position:fixed;right:16px;bottom:16px;z-index:10;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 20px;background:#1F7A4A;color:#fff;font-weight:700;text-decoration:none;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.flutua svg{width:22px;height:22px}
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr}
+  .relogio-box{order:-1;display:grid;grid-template-columns:120px 1fr;align-items:center;gap:8px 16px}
+  .dias-mini{grid-column:1/-1;grid-row:2;justify-content:flex-start}
+  .legenda{grid-column:2;grid-row:1}
+  .relogio{width:120px;flex:none}
+  .legenda{text-align:left;min-height:0}
+  .horario .grade,.aval .linha,.onde{grid-template-columns:1fr}
+  footer{padding-bottom:96px}
+}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar para o conteúdo</a>
+<div class="aviso" role="note">Prévia feita pela Ribatejo Sites para a Barbearia Mister M. Ainda não é o site oficial.</div>
 
-<section id="onde"><div class="w"><h2>Onde estamos</h2><div class="local"><div>
-<p><strong>Av. Prof. Egas Moniz 6B, 2135-232 Samora Correia</strong></p><table><tr><td>Segunda a sexta</td><td>9h30 – 13h30 · 15h – 20h</td></tr><tr><td>Sábado</td><td>8h30 – 14h30</td></tr><tr><td>Domingo</td><td>Fechado</td></tr></table>
-<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Barbearia+Mister+M%2C+Av.+Prof.+Egas+Moniz+6B%2C+2135-232+Samora+Correia" target="_blank" rel="noopener">Abrir no Google Maps</a>
-</div><iframe class="mapa" title="Mapa de Barbearia Mister M" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Barbearia+Mister+M%2C+Av.+Prof.+Egas+Moniz+6B%2C+2135-232+Samora+Correia&amp;z=16&amp;output=embed"></iframe></div></div></section>
+<header class="top">
+  <a class="marca" href="#main">Mister M</a>
+  <a class="chip" href="#horario" data-chip><i></i><span>Ver horário</span></a>
+</header>
 
-<section class="faixa final"><div class="w"><h2>Até já</h2><p>Marque em menos de um minuto pelo WhatsApp.</p>
-<a class="btn" href="https://wa.me/351916010372?text=Ol%C3%A1%21%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio%20na%20Barbearia%20Mister%20M."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>Marcar pelo WhatsApp</a></div></section>
-<footer>Barbearia Mister M · Av. Prof. Egas Moniz 6B, 2135-232 Samora Correia · Site por Ribatejo Sites</footer>
-<a class="flutua" href="https://wa.me/351916010372?text=Ol%C3%A1%21%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio%20na%20Barbearia%20Mister%20M." aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>WhatsApp</a>
-</body></html>
+<main id="main" tabindex="-1">
+  <div class="hero">
+    <div>
+      <h1><span>Começa a horas.</span><span>Acaba a horas.</span></h1>
+      <p class="fonte-h1">Palavras de um cliente, nas avaliações do Google.</p>
+      <p class="lead">Barbearia na Av. Prof. Egas Moniz, em Samora Correia. Corte de cabelo e barba, espaço limpo e marcação que se cumpre.</p>
+      <div class="acoes">
+        <a class="btn cheio" href="https://wa.me/351916010372?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio%20na%20Barbearia%20Mister%20M.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>
+          Marcar pelo WhatsApp</a>
+        <a class="btn vazio" href="tel:+351916010372">Ligar 916 010 372</a>
+      </div>
+      <p class="prova"><b>5,0 ★</b> em 68 avaliações no Google</p>
+    </div>
+    <div class="relogio-box">
+      <svg class="relogio" viewBox="0 0 300 300" role="img" aria-label="Relógio com a hora atual em Samora Correia e o horário de abertura do dia">
+        <circle cx="150" cy="150" r="140" fill="none" stroke="currentColor" stroke-width="5"/>
+        <path class="arco" d="M150 150Z"/>
+        <g id="marcas"></g>
+        <line class="ponteiro" data-h x1="150" y1="150" x2="150" y2="78" stroke="currentColor" stroke-width="9" stroke-linecap="round"/>
+        <line class="ponteiro" data-m x1="150" y1="150" x2="150" y2="44" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="150" cy="150" r="9" fill="currentColor"/>
+      </svg>
+      <div class="dias-mini" role="group" aria-label="Ver o horário de outro dia no relógio"></div>
+      <p class="legenda" aria-live="polite"></p>
+    </div>
+  </div>
+
+  <section id="horario" class="horario" aria-labelledby="t-hor">
+    <h2 id="t-hor">Horário</h2>
+    <div class="grade">
+      <table class="tabela"><tbody></tbody></table>
+      <div>
+        <p class="vaga"><strong>Tabela de serviços e preços</strong>Corte de cabelo e barba são os serviços citados nas avaliações. A tabela completa entra aqui com os dados da barbearia antes de o site ir para o ar.</p>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="aval" aria-labelledby="t-aval">
+    <h2 id="t-aval">O que dizem os clientes</h2>
+    <div class="linha">
+      <blockquote class="grande"><p>“Agendamento online sempre sem falhas. Começa a horas e acaba a horas.”</p><cite>Avaliação no Google</cite></blockquote>
+      <div>
+        <blockquote class="peq"><p>“Ofereceram-me logo uma água ou café. O atendimento é muito mais que 5⭐️.”</p><cite>Avaliação no Google</cite></blockquote>
+        <blockquote class="peq"><p>“Ambiente aconchegante para cortar o cabelo e fazer a minha barba.”</p><cite>Avaliação no Google</cite></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="onde" aria-labelledby="t-onde" style="padding-top:0">
+    <h2 id="t-onde">Onde estamos</h2>
+    <div class="onde">
+      <div>
+        <p style="margin-bottom:24px"><strong>Av. Prof. Egas Moniz 6B<br>2135-232 Samora Correia</strong></p>
+        <a class="btn cheio" href="https://www.google.com/maps/search/?api=1&query=Barbearia%20Mister%20M%2C%20Av.%20Prof.%20Egas%20Moniz%206b%2C%20Samora%20Correia" target="_blank" rel="noopener">Abrir no Google Maps</a>
+      </div>
+      <iframe class="mapa" title="Mapa: Barbearia Mister M, Av. Prof. Egas Moniz 6B, Samora Correia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Barbearia%20Mister%20M%2C%20Av.%20Prof.%20Egas%20Moniz%206b%2C%202135-232%20Samora%20Correia&z=16&output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Barbearia Mister M · Av. Prof. Egas Moniz 6B, Samora Correia · <a href="tel:+351916010372">916 010 372</a></span>
+  <a class="chip" href="#horario" data-chip><i></i><span>Ver horário</span></a>
+  <span>Site por Ribatejo Sites</span>
+</footer>
+
+<a class="flutua" href="https://wa.me/351916010372?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio%20na%20Barbearia%20Mister%20M." aria-label="Marcar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>WhatsApp</a>
+
+<script>
+(function(){
+  // Horário real (Google Maps). Cada dia: lista de intervalos [abre, fecha] em horas.
+  var NOMES=['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+  var H={0:[],1:[[9.5,13.5],[15,20]],2:[[9.5,13.5],[15,20]],3:[[9.5,13.5],[15,20]],4:[[9.5,13.5],[15,20]],5:[[9.5,13.5],[15,20]],6:[[8.5,14.5]]};
+  function fmt(h){var hh=Math.floor(h),mm=Math.round((h-hh)*60);return hh+'h'+(mm<10?'0':'')+mm}
+  function txtDia(d){return H[d].length?H[d].map(function(i){return fmt(i[0])+' – '+fmt(i[1])}).join(' · '):'Fechado'}
+
+  var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Lisbon',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  var o={};p.forEach(function(x){o[x.type]=x.value});
+  var hoje={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday], agora=(+o.hour%24)+(+o.minute)/60;
+
+  // Marcas do mostrador
+  var g=document.getElementById('marcas'), ns='http://www.w3.org/2000/svg';
+  for(var i=0;i<12;i++){var l=document.createElementNS(ns,'line');l.setAttribute('x1',150);l.setAttribute('y1',16);l.setAttribute('x2',150);l.setAttribute('y2',i%3?28:38);l.setAttribute('stroke','currentColor');l.setAttribute('stroke-width',i%3?3:6);l.setAttribute('transform','rotate('+i*30+' 150 150)');g.appendChild(l)}
+
+  // Arco do horário (mostrador de 12h; usamos o intervalo principal do dia)
+  function ponto(h){var a=(h%12)/12*2*Math.PI;return [150+128*Math.sin(a),150-128*Math.cos(a)]}
+  function arco(ints){
+    if(!ints.length) return 'M150 150Z';
+    return ints.map(function(iv){var a=ponto(iv[0]),b=ponto(iv[1]),grande=(iv[1]-iv[0])>6?1:0;
+      return 'M150 150L'+a[0].toFixed(1)+' '+a[1].toFixed(1)+'A128 128 0 '+grande+' 1 '+b[0].toFixed(1)+' '+b[1].toFixed(1)+'Z'}).join('');
+  }
+  var arcoEl=document.querySelector('.arco'), ph=document.querySelector('[data-h]'), pm=document.querySelector('[data-m]'), leg=document.querySelector('.legenda');
+  var rotH=0, rotM=0;
+  function apontar(h){ // gira sempre para a frente até à hora pedida
+    var alvoH=(h%12)*30, alvoM=(h%1)*360;
+    rotH+=((alvoH-rotH)%360+360)%360; rotM+=((alvoM-rotM)%360+360)%360;
+    ph.style.transform='rotate('+rotH+'deg)'; pm.style.transform='rotate('+rotM+'deg)';
+  }
+  function estadoAgora(){
+    var ints=H[hoje];
+    for(var k=0;k<ints.length;k++){ if(agora>=ints[k][0]&&agora<ints[k][1]) return {aberto:true,txt:'Aberto agora · fecha às '+fmt(ints[k][1])}; }
+    for(k=0;k<ints.length;k++){ if(agora<ints[k][0]) return {aberto:false,txt:'Fechado agora · abre às '+fmt(ints[k][0])}; }
+    for(var d=1;d<=7;d++){var dd=(hoje+d)%7; if(H[dd].length) return {aberto:false,txt:'Fechado agora · abre '+(d===1?'amanhã':NOMES[dd].toLowerCase())+' às '+fmt(H[dd][0][0])};}
+  }
+  var est=estadoAgora();
+  document.querySelectorAll('[data-chip]').forEach(function(c){c.dataset.aberto=est.aberto?'sim':'nao';c.querySelector('span').textContent=est.txt});
+
+  function mostrar(d){
+    arcoEl.setAttribute('d',arco(H[d]));
+    if(d===hoje){ apontar(agora); leg.innerHTML='<b>Agora em Samora Correia.</b> '+est.txt+'.'; }
+    else { apontar(H[d].length?H[d][0][0]:0); leg.innerHTML='<b>'+NOMES[d]+':</b> '+txtDia(d)+'.'; }
+    botoes.forEach(function(b){b.setAttribute('aria-pressed',+b.dataset.d===d?'true':'false')});
+  }
+  var mini=document.querySelector('.dias-mini'), corpo=document.querySelector('.tabela tbody'), botoes=[];
+  var CURTO=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+  [1,2,3,4,5,6,0].forEach(function(d){
+    var b=document.createElement('button');b.type='button';b.className='dm';b.dataset.d=d;b.textContent=CURTO[d];
+    b.setAttribute('aria-label',NOMES[d]+(d===hoje?', hoje':''));
+    b.addEventListener('click',function(){mostrar(d)});
+    mini.appendChild(b); botoes.push(b);
+    var tr=document.createElement('tr'); if(d===hoje) tr.setAttribute('aria-current','date');
+    tr.innerHTML='<td>'+NOMES[d]+(d===hoje?' (hoje)':'')+'</td><td>'+txtDia(d).replace(' · ','<br>')+'</td>'; corpo.appendChild(tr);
+  });
+  mostrar(hoje);
+})();
+</script>
+</body>
+</html>

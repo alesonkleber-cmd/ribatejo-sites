@@ -1,111 +1,222 @@
 <!DOCTYPE html>
-<html lang="pt-PT"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Maria Nails and Art · Samora Correia</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Maria Nails and Art · Samora Correia</title>
+<meta name="description" content="Estúdio de unhas em Samora Correia. 5,0 estrelas no Google. Marque pelo WhatsApp.">
+<meta property="og:title" content="Maria Nails and Art · Samora Correia">
+<meta property="og:description" content="Estúdio de unhas na Rua Guerra Junqueiro, Samora Correia. Marque pelo WhatsApp.">
+<meta name="theme-color" content="#EDE9EA">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#FBF6F4;--bg2:#F3E7E4;--txt:#3B1F2B;--sub:#7D5E68;--acc:#8E1F3F;--acc2:#D94F70;--btnTxt:#FFFFFF;--fd:'Cormorant Garamond', Georgia, serif;--fb:'Nunito Sans', system-ui, sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--fb);background:var(--bg);color:var(--txt);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
-.aviso{background:#FFE27A;color:#2a2200;font-size:13px;text-align:center;padding:8px 14px}
-.w{max-width:1080px;margin:0 auto;padding:0 22px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-nav .marca{font-family:var(--fd);font-size:22px;text-decoration:none;}
-nav .ligar{font-weight:700;text-decoration:none;font-size:15px;border-bottom:2px solid var(--acc)}
-.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:40px;align-items:center;padding:40px 0 70px}
-h1{font-family:var(--fd);font-weight:500;font-size:clamp(44px,8vw,92px);line-height:1.02;letter-spacing:-0.02em;margin-bottom:22px;}
-.intro{font-size:19px;color:var(--sub);max-width:34ch;margin-bottom:30px}
-.acoes{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:10px;background:var(--acc);color:var(--btnTxt);font-weight:700;text-decoration:none;padding:16px 26px;border-radius:999px;font-size:17px}
-.btn svg{width:20px;height:20px}
-.btn.sec{background:transparent;color:var(--txt);box-shadow:inset 0 0 0 2px var(--txt)}
-.prova{margin-top:28px;font-size:15px;color:var(--sub)}
-.prova strong{color:var(--txt);font-size:17px}
-.estrelas{color:var(--acc);letter-spacing:2px}
-.destaque{display:flex;justify-content:center}
-section{padding:72px 0}
-.faixa{background:var(--bg2)}
-h2{font-family:var(--fd);font-weight:500;font-size:clamp(32px,5vw,52px);line-height:1.1;margin-bottom:32px;}
-.servicos{display:grid;grid-template-columns:repeat(2,1fr);gap:0 48px}
-.servico{padding:20px 0;border-top:1px solid color-mix(in srgb,var(--txt) 18%,transparent)}
-.servico h3{font-size:19px;margin-bottom:4px}
-.servico p{color:var(--sub);font-size:16px}
-.obs{color:var(--sub);font-size:14px;margin-top:22px}
-.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;counter-reset:p}
-.passo{counter-increment:p}
-.passo::before{content:counter(p);display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--acc);color:var(--btnTxt);font-weight:800;margin-bottom:14px;font-size:19px}
-.passo h3{font-size:19px;margin-bottom:4px}
-.passo p{color:var(--sub);font-size:16px}
-.citacao{font-family:var(--fd);font-size:clamp(26px,3.6vw,40px);line-height:1.25;max-width:26ch;margin-bottom:18px;font-style:italic;}
-.outras{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:36px}
-.outras p{color:var(--sub)}
-.fonte{font-size:14px;color:var(--sub);margin-top:6px}
-.local{display:grid;grid-template-columns:1fr 1.2fr;gap:36px;align-items:start}
-table{width:100%;border-collapse:collapse;margin:8px 0 26px}
-td{padding:10px 0;border-bottom:1px solid color-mix(in srgb,var(--txt) 15%,transparent)}
-td+td{text-align:right;color:var(--sub)}
-.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:18px;background:var(--bg2)}
-.final{text-align:center}
-.final h2{margin-bottom:18px}
-.final p{color:var(--sub);margin-bottom:28px}
-footer{padding:30px 0 100px;font-size:14px;color:var(--sub);text-align:center}
-.flutua{position:fixed;right:16px;bottom:16px;z-index:5;background:#25D366;color:#fff;border-radius:999px;padding:14px 18px;display:flex;gap:8px;align-items:center;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25)}
-.flutua svg{width:22px;height:22px}
-/* destaques */
-.poste{height:min(420px,60vh)}
-.gira{animation:sobe 6s linear infinite}
-@keyframes sobe{to{transform:translateY(160px)}}
-.frascos{display:grid;grid-template-columns:repeat(3,64px);gap:18px 22px}
-.frasco{display:flex;flex-direction:column;align-items:center}
-.frasco i{width:22px;height:34px;background:#2b1a20;border-radius:6px 6px 2px 2px}
-.frasco b{width:56px;height:62px;background:var(--c);border-radius:14px;box-shadow:inset -8px -10px 0 rgba(0,0,0,.12),inset 8px 8px 0 rgba(255,255,255,.25)}
-.relogio{width:min(300px,70vw);color:var(--txt)}
-.ponteiro{transform-origin:100px 100px;animation:rodar 12s linear infinite}
-@keyframes rodar{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){.gira,.ponteiro{animation:none}}
-@media(max-width:760px){
- .hero{grid-template-columns:1fr;padding-top:16px;gap:28px}
- .destaque{order:-1;justify-content:flex-start}
- .poste{height:260px;transform:rotate(90deg);transform-origin:center;margin:-100px 0 -100px 100px}
- .frascos{grid-template-columns:repeat(6,44px);gap:10px}
- .frasco b{width:40px;height:44px;border-radius:10px}.frasco i{width:16px;height:24px}
- .relogio{width:140px}
- .servicos,.passos,.outras,.local{grid-template-columns:1fr}
- section{padding:56px 0}
+:root{
+  --ground:#EDE9EA; --ground-2:#E3DDDF; --ink:#2B1822; --ink-2:#6B5560;
+  --acc:#8E1F3F; --acc-ink:#FFFFFF;
+  --display:"Gambarino",Georgia,"Times New Roman",serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease-enter:cubic-bezier(.25,1,.5,1); --ease-micro:cubic-bezier(.33,1,.68,1);
+  --dur-2:200ms; --dur-3:400ms;
+  --gutter:clamp(20px,4vw,56px);
 }
-</style></head><body>
-<div class="aviso">Prévia feita pela Ribatejo Sites para Maria Nails and Art. Ainda não é o site oficial.</div>
-<div class="w"><nav><a class="marca" href="#">Maria Nails and Art</a><a class="ligar" href="tel:+351918258432">+351 918 258 432</a></nav>
-<div class="hero"><div>
-<h1>Unhas feitas com calma, cor e cuidado.</h1><p class="intro">Manicure, pedicure, gel e nail art num estúdio tranquilo em Samora Correia. Cada detalhe é pensado consigo.</p>
-<div class="acoes"><a class="btn" href="https://wa.me/351918258432?text=Ol%C3%A1%21%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio%20na%20Maria%20Nails%20and%20Art."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>Marcar pelo WhatsApp</a><a class="btn sec" href="#onde">Como chegar</a></div>
-<p class="prova"><span class="estrelas">★★★★★</span> <strong>5,0</strong> de 18 avaliações no Google</p>
-</div><div class="destaque"><div class="frascos" aria-hidden="true"><div class="frasco" style="--c:#8E1F3F"><i></i><b></b></div><div class="frasco" style="--c:#D94F70"><i></i><b></b></div><div class="frasco" style="--c:#E9A6B5"><i></i><b></b></div><div class="frasco" style="--c:#F3D5CF"><i></i><b></b></div><div class="frasco" style="--c:#5B2A86"><i></i><b></b></div><div class="frasco" style="--c:#C2A27A"><i></i><b></b></div></div></div></div></div>
+*{box-sizing:border-box;margin:0;padding:0}
+html:not(:has(:focus-visible)){scroll-behavior:smooth}
+body{background:var(--ground);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:#fff;padding:10px 14px;font-weight:700;z-index:20;text-decoration:none}
+.skip:focus{top:12px}
+.aviso{background:#F2D46B;color:#241b00;font-size:13px;line-height:1.4;text-align:center;padding:8px 16px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px var(--gutter)}
+.marca{font-family:var(--display);font-size:24px;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
+.marca svg{width:14px;height:20px}
+.top nav{display:flex;gap:24px;font-size:15px;font-weight:600}
+.top nav a{text-decoration:none;color:var(--ink-2);padding:10px 0;transition:color var(--dur-2) var(--ease-micro)}
+.top nav a:hover{color:var(--ink)}
 
-<section class="faixa"><div class="w"><h2>Serviços</h2><div class="servicos"><div class="servico"><h3>Manicure</h3><p>Cutículas, forma e verniz à escolha.</p></div><div class="servico"><h3>Pedicure</h3><p>Cuidado completo dos pés, com hidratação.</p></div><div class="servico"><h3>Unhas de gel</h3><p>Alongamento natural e resistente.</p></div><div class="servico"><h3>Verniz gel</h3><p>Brilho que dura semanas sem lascar.</p></div><div class="servico"><h3>Nail art</h3><p>Desenhos à mão, do discreto ao ousado.</p></div><div class="servico"><h3>Manutenção</h3><p>Reposição do gel a cada 3 a 4 semanas.</p></div></div>
-<p class="obs">Preços e lista final combinados consigo antes de o site ir para o ar.</p></div></section>
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,6vw,96px);align-items:center;padding:clamp(28px,6vw,80px) var(--gutter) clamp(56px,8vw,112px)}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,5.6vw,84px);line-height:1.02;letter-spacing:-.015em;max-width:13ch}
+.lead{color:var(--ink-2);font-size:19px;max-width:36ch;margin:24px 0 32px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:17px;text-decoration:none;transition:background-color var(--dur-3) var(--ease-enter),color var(--dur-3) var(--ease-enter),box-shadow var(--dur-2)}
+.btn svg{width:20px;height:20px}
+.btn.cheio{background:var(--acc);color:var(--acc-ink)}
+.btn.cheio:hover{box-shadow:inset 0 0 0 100px rgba(0,0,0,.12)}
+.btn.vazio{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.vazio:hover{background:var(--ink);color:var(--ground)}
+.prova{margin-top:26px;font-size:15px;color:var(--ink-2)}
+.prova b{color:var(--ink);font-size:18px}
 
-<section><div class="w"><h2>Marcar é simples</h2><div class="passos">
-<div class="passo"><h3>Toque em "Marcar"</h3><p>Abre o WhatsApp com a mensagem já escrita.</p></div>
-<div class="passo"><h3>Escolha o horário</h3><p>Diga o serviço e o dia que prefere.</p></div>
-<div class="passo"><h3>Apareça</h3><p>Recebe a confirmação e é só vir.</p></div>
-</div></div></section>
+/* assinatura: a unha e os frascos */
+.palco{display:flex;flex-direction:column;align-items:center;gap:28px}
+.unha{width:clamp(170px,22vw,260px);height:auto}
+.unha .cor{fill:var(--acc);transition:fill var(--dur-3) var(--ease-enter)}
+.frascos{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.frascos legend{width:100%;text-align:center;font-size:14px;color:var(--ink-2);margin-bottom:10px}
+fieldset{border:0}
+.frasco{appearance:none;border:0;background:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;width:48px;padding:4px 0;border-radius:8px}
+.frasco i{width:16px;height:22px;background:var(--ink);border-radius:4px 4px 1px 1px}
+.frasco b{width:40px;height:42px;border-radius:11px;background:var(--c);box-shadow:inset -6px -7px 0 rgba(0,0,0,.12),inset 6px 6px 0 rgba(255,255,255,.28)}
+.frasco[aria-pressed="true"] b{outline:2px solid var(--ink);outline-offset:3px}
+.nome-cor{font-size:14px;color:var(--ink-2);min-height:1.4em}
 
-<section class="faixa"><div class="w"><h2>Quem vem, volta</h2>
-<p class="citacao">“Super querida e faz unhas lindíssimas! O cuidado com cada detalhe nota-se em cada trabalho.”</p><p class="fonte">Avaliação no Google</p>
-<div class="outras"><div><p>“Extremamente simpática e atenciosa, com preços acessíveis e muito profissionalismo.”</p><p class="fonte">Avaliação no Google</p></div><div><p>“Profissionalismo e carisma. Que continue assim!”</p><p class="fonte">Avaliação no Google</p></div></div>
-</div></section>
+section{padding:clamp(64px,9vw,128px) var(--gutter)}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(36px,4.4vw,60px);line-height:1.05;margin-bottom:clamp(24px,4vw,44px)}
+.aval{background:var(--ground-2)}
+.aval blockquote{max-width:30ch}
+.aval .grande p{font-family:var(--display);font-size:clamp(28px,3.4vw,46px);line-height:1.2}
+.aval .grande p::before{content:"“";color:var(--acc);transition:color var(--dur-3)}
+.aval .grande p::after{content:"”";color:var(--acc);transition:color var(--dur-3)}
+.aval cite{display:block;font-style:normal;font-size:14px;color:var(--ink-2);margin-top:12px}
+.aval .linha{display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(28px,5vw,72px);align-items:end}
+.aval .peq p{font-size:19px}
+.serv{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px)}
+.serv .texto p{color:var(--ink-2);max-width:40ch}
+.vaga{border:1.5px dashed var(--ink-2);border-radius:16px;padding:24px;color:var(--ink-2);max-width:44ch;align-self:start}
+.vaga strong{color:var(--ink);display:block;margin-bottom:6px}
+.onde{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,5vw,72px);align-items:start}
+.estado{display:inline-flex;align-items:center;gap:10px;font-weight:700;margin-bottom:20px}
+.estado i{width:10px;height:10px;border-radius:50%;background:var(--ink-2)}
+.estado[data-aberto="sim"] i{background:#2E8B57}
+table{width:100%;border-collapse:collapse;margin:8px 0 28px}
+td{padding:12px 0;border-bottom:1px solid #d3cacd}
+td+td{text-align:right;color:var(--ink-2)}
+tr[aria-current] td{color:var(--ink);font-weight:700}
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:20px;background:var(--ground-2);display:block}
+footer{padding:48px var(--gutter);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;font-size:14px;color:var(--ink-2);border-top:1px solid #d3cacd}
+.mini{display:flex;gap:6px}
+.mini span{width:14px;height:20px;border-radius:5px;background:var(--c)}
+.flutua{position:fixed;right:16px;bottom:16px;z-index:10;display:inline-flex;align-items:center;gap:8px;min-height:52px;padding:0 20px;background:#1F7A4A;color:#fff;font-weight:700;text-decoration:none;border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.flutua svg{width:22px;height:22px}
+@media (max-width:760px){
+  .top nav a:not(.tel){display:none}
+  .hero{grid-template-columns:1fr}
+  .palco{order:-1;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:flex-start;gap:14px}
+  .unha{width:84px}
+  .frascos{width:100%}
+  .frascos{justify-content:flex-start}
+  .frascos legend{text-align:left}
+  .frasco{width:44px}.frasco b{width:34px;height:36px}.frasco i{width:13px;height:18px}
+  .nome-cor{display:none}
+  .aval .linha,.serv,.onde{grid-template-columns:1fr}
+  footer{padding-bottom:96px}
+}
+@media (prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar para o conteúdo</a>
+<div class="aviso" role="note">Prévia feita pela Ribatejo Sites para a Maria Nails and Art. Ainda não é o site oficial.</div>
 
-<section id="onde"><div class="w"><h2>Onde estamos</h2><div class="local"><div>
-<p><strong>R. Guerra Junqueiro 4, 2135-131 Samora Correia</strong></p><table><tr><td>Segunda a sábado</td><td>9h – 19h</td></tr><tr><td>Domingo</td><td>Fechado</td></tr></table>
-<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Maria+Nails+and+Art%2C+R.+Guerra+Junqueiro+4%2C+2135-131+Samora+Correia" target="_blank" rel="noopener">Abrir no Google Maps</a>
-</div><iframe class="mapa" title="Mapa de Maria Nails and Art" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Maria+Nails+and+Art%2C+R.+Guerra+Junqueiro+4%2C+2135-131+Samora+Correia&amp;z=16&amp;output=embed"></iframe></div></div></section>
+<header class="top">
+  <a class="marca" href="#main"><svg viewBox="0 0 14 20" aria-hidden="true"><path d="M7 0C3 0 0 4 0 10v10h14V10C14 4 11 0 7 0Z" fill="var(--acc)"/></svg>Maria Nails and Art</a>
+  <nav aria-label="Principal">
+    <a href="#avaliacoes">Avaliações</a>
+    <a href="#onde">Onde estamos</a>
+    <a class="tel" href="tel:+351918258432">918 258 432</a>
+  </nav>
+</header>
 
-<section class="faixa final"><div class="w"><h2>Até já</h2><p>Marque em menos de um minuto pelo WhatsApp.</p>
-<a class="btn" href="https://wa.me/351918258432?text=Ol%C3%A1%21%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio%20na%20Maria%20Nails%20and%20Art."><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>Marcar pelo WhatsApp</a></div></section>
-<footer>Maria Nails and Art · R. Guerra Junqueiro 4, 2135-131 Samora Correia · Site por Ribatejo Sites</footer>
-<a class="flutua" href="https://wa.me/351918258432?text=Ol%C3%A1%21%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio%20na%20Maria%20Nails%20and%20Art." aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>WhatsApp</a>
-</body></html>
+<main id="main" tabindex="-1">
+  <div class="hero">
+    <div>
+      <h1>Unhas lindíssimas, com cuidado em cada detalhe.</h1>
+      <p class="lead">Estúdio de unhas na Rua Guerra Junqueiro, em Samora Correia. É assim que as clientes descrevem o trabalho da Maria.</p>
+      <div class="acoes">
+        <a class="btn cheio" href="https://wa.me/351918258432?text=Ol%C3%A1%20Maria!%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio.">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>
+          Marcar pelo WhatsApp</a>
+        <a class="btn vazio" href="tel:+351918258432">Ligar</a>
+      </div>
+      <p class="prova"><b>5,0 ★</b> em 18 avaliações no Google</p>
+    </div>
+
+    <div class="palco">
+      <svg class="unha" viewBox="0 0 200 300" role="img" aria-label="Unha pintada com a cor escolhida">
+        <path d="M100 8C46 8 18 70 18 150v150h164V150C182 70 154 8 100 8Z" fill="#E7D3CB"/>
+        <path class="cor" d="M100 22C56 22 34 78 34 150v150h132V150C166 78 144 22 100 22Z"/>
+        <path d="M70 60c-14 18-20 46-20 80" stroke="#fff" stroke-opacity=".45" stroke-width="10" stroke-linecap="round" fill="none"/>
+      </svg>
+      <fieldset class="frascos">
+        <legend>Toque num verniz para pintar</legend>
+        <button class="frasco" type="button" style="--c:#8E1F3F" data-cor="#8E1F3F" data-texto="#FFFFFF" data-nome="Bordô" aria-pressed="true" aria-label="Bordô"><i></i><b></b></button>
+        <button class="frasco" type="button" style="--c:#B8325A" data-cor="#B8325A" data-texto="#FFFFFF" data-nome="Framboesa" aria-pressed="false" aria-label="Framboesa"><i></i><b></b></button>
+        <button class="frasco" type="button" style="--c:#E6A3B3" data-cor="#E6A3B3" data-texto="#2B1822" data-nome="Rosa claro" aria-pressed="false" aria-label="Rosa claro"><i></i><b></b></button>
+        <button class="frasco" type="button" style="--c:#E9CFC4" data-cor="#E9CFC4" data-texto="#2B1822" data-nome="Nude" aria-pressed="false" aria-label="Nude"><i></i><b></b></button>
+        <button class="frasco" type="button" style="--c:#4E2A7A" data-cor="#4E2A7A" data-texto="#FFFFFF" data-nome="Violeta" aria-pressed="false" aria-label="Violeta"><i></i><b></b></button>
+        <button class="frasco" type="button" style="--c:#1F1A1D" data-cor="#1F1A1D" data-texto="#FFFFFF" data-nome="Preto" aria-pressed="false" aria-label="Preto"><i></i><b></b></button>
+      </fieldset>
+      <p class="nome-cor" aria-live="polite">Bordô</p>
+    </div>
+  </div>
+
+  <section id="avaliacoes" class="aval" aria-labelledby="t-aval">
+    <h2 id="t-aval">O que dizem as clientes</h2>
+    <div class="linha">
+      <blockquote class="grande"><p>A Maria é super querida e faz unhas lindíssimas! O atendimento é excelente e o cuidado com cada detalhe nota-se em cada trabalho.</p><cite>Avaliação no Google</cite></blockquote>
+      <blockquote class="peq"><p>“Profissionalismo, carismática… Que continue assim. Satisfeita.”</p><cite>Avaliação no Google</cite></blockquote>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-serv">
+    <h2 id="t-serv">Serviços</h2>
+    <div class="serv">
+      <div class="texto"><p>As clientes destacam o atendimento, o cuidado com os detalhes e os preços acessíveis.</p></div>
+      <p class="vaga"><strong>Tabela de serviços e preços</strong>Entra aqui com os dados do estúdio, junto com fotos reais dos trabalhos, antes de o site ir para o ar.</p>
+    </div>
+  </section>
+
+  <section id="onde" aria-labelledby="t-onde" style="padding-top:0">
+    <h2 id="t-onde">Onde estamos</h2>
+    <div class="onde">
+      <div>
+        <p class="estado" data-estado aria-live="polite"><i></i><span>Horário</span></p>
+        <p><strong>R. Guerra Junqueiro 4<br>2135-131 Samora Correia</strong></p>
+        <table><tbody>
+          <tr data-dias="1,2,3,4,5,6"><td>Segunda a sábado</td><td>9h00 – 19h00</td></tr>
+          <tr data-dias="0"><td>Domingo</td><td>Fechado</td></tr>
+        </tbody></table>
+        <a class="btn cheio" href="https://www.google.com/maps/search/?api=1&query=Maria%20Nails%20and%20Art%2C%20R.%20Guerra%20Junqueiro%204%2C%20Samora%20Correia" target="_blank" rel="noopener">Abrir no Google Maps</a>
+      </div>
+      <iframe class="mapa" title="Mapa: Maria Nails and Art, R. Guerra Junqueiro 4, Samora Correia" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Maria%20Nails%20and%20Art%2C%20R.%20Guerra%20Junqueiro%204%2C%202135-131%20Samora%20Correia&z=16&output=embed"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <span>Maria Nails and Art · R. Guerra Junqueiro 4, Samora Correia · <a href="tel:+351918258432">918 258 432</a></span>
+  <span class="mini" aria-hidden="true"><span style="--c:#8E1F3F"></span><span style="--c:#B8325A"></span><span style="--c:#E6A3B3"></span><span style="--c:#E9CFC4"></span><span style="--c:#4E2A7A"></span><span style="--c:#1F1A1D"></span></span>
+  <span>Site por Ribatejo Sites</span>
+</footer>
+
+<a class="flutua" href="https://wa.me/351918258432?text=Ol%C3%A1%20Maria!%20Gostaria%20de%20marcar%20um%20hor%C3%A1rio." aria-label="Marcar pelo WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>WhatsApp</a>
+
+<script>
+(function(){
+  // Assinatura: tocar num verniz pinta a unha e o tom do site.
+  var root=document.documentElement, nome=document.querySelector('.nome-cor');
+  var botoes=document.querySelectorAll('.frasco');
+  botoes.forEach(function(b){
+    b.addEventListener('click',function(){
+      root.style.setProperty('--acc', b.dataset.cor);
+      root.style.setProperty('--acc-ink', b.dataset.texto);
+      botoes.forEach(function(x){x.setAttribute('aria-pressed', x===b ? 'true':'false')});
+      nome.textContent=b.dataset.nome;
+    });
+  });
+  var horario={0:null,1:[9,19],2:[9,19],3:[9,19],4:[9,19],5:[9,19],6:[9,19]};
+  var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Lisbon',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  var o={};p.forEach(function(x){o[x.type]=x.value});
+  var dia={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[o.weekday], h=(+o.hour%24)+(+o.minute)/60, j=horario[dia];
+  var aberto=!!j&&h>=j[0]&&h<j[1], el=document.querySelector('[data-estado]');
+  el.dataset.aberto=aberto?'sim':'nao';
+  el.querySelector('span').textContent=aberto?'Aberto agora · fecha às '+j[1]+'h00':'Fechado agora';
+  document.querySelectorAll('tr[data-dias]').forEach(function(tr){ if(tr.dataset.dias.split(',').indexOf(String(dia))>-1) tr.setAttribute('aria-current','date'); });
+})();
+</script>
+</body>
+</html>
